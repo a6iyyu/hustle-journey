@@ -1,0 +1,107 @@
+:: StoryData
+{
+	"ifid": "A4B6DBD6-0E98-43CC-BBDD-FAA52A139818",
+	"format": "SugarCube",
+	"format-version": "2.37.3",
+	"start": "Welcome",
+	"zoom": 1
+}
+
+:: StoryTitle
+Hustle Journey
+
+
+:: Welcome
+What happens after graduation? Life isn't always as easy as landing a job right
+after college. In The Hustle Journey, you step into the shoes of a fresh graduate
+who must juggle multiple roles in order to survive. Experience the fun, challenges,
+and tough decisions of being a jack-of-all-trades while navigating life after
+university in search of success.
+
+[[Next->Select the language]]
+
+
+:: Select the language
+[[English->Opening]]
+[[Bahasa Indonesia->Pembukaan]]
+
+
+
+<!-- English -->
+:: Opening
+The moon was shining brightly in the middle of the silent night, and the noise of
+conversation had long since disappeared from my hearing. The night breeze sneaks
+into the cramped boarding room, making the pillow and bolster feel cold. Tomorrow
+will be a happy day and for some reason my stomach feels tingly, like there are
+butterflies perched in it. I have to remind them at home once again.
+
+[[Next->Gosh, where's my phone?]]
+
+
+:: Gosh, where's my phone?
+I searched every corner of the room for the cell phone, from on top of the cupboard,
+under the table, even in a pile of books. If my mom was here, she would have found
+it long ago. But I'm just an overseas kid, and the distance between my hometown and
+campus stretches 110km. Time was ticking away, it was only an hour to midnight, and
+sleepiness was slowly taking over.
+
+[[I'd better go find my cell phone.]]
+Sensitivity +1, Health -1
+
+[[I'm so tired!]]
+Sensitivity -1, Health +1
+
+
+:: I'd better go find my cell phone.
+To be announced.
+
+
+:: I'm so tired!
+After feeling tired of looking for the cell phone, I sat down on the edge of the bed.
+It seemed pointless to continue searching now. It was midnight and now the sound of the
+boarding house owner's owl was also sounding louder and louder, “hoo hoooo.” I lay down
+slowly, staring at the ceiling of my room that was faintly illuminated by the lamplight.
+Thoughts of tomorrow's event began to fade as my sleepiness overcame my soul.
+
+Before I fell asleep, I wondered if they knew about my schedule tomorrow? tomorrow?
+
+
+
+<!-- Bahasa Indonesia -->
+:: Pembukaan
+Bulan bersinar terang di tengah malam yang sunyi, dan suara bising percakapan telah
+lama menghilang dari pendengaranku. Angin malam menyelinap ke dalam kamar kos yang sempit,
+membuat bantal dan guling terasa dingin. Besok akan menjadi hari yang membahagiakan dan
+entah kenapa perutku terasa geli, seperti ada kupu-kupu bertengger di dalamnya. Aku harus
+mengingatkan mereka di rumah sekali lagi.
+
+[[Selanjutnya->Astaga, dimana ponselku?]]
+
+
+:: Astaga, dimana ponselku?
+Aku menggeledah setiap sudut kamar untuk mencari telepon seluler, mulai di atas lemari,
+di bawah meja, bahkan di tumpukan buku. Andai ibu ada di sini, pasti benda itu sudah
+ditemukan sejak tadi. Tapi aku hanyalah anak perantauan, dan jarak antara kota asalku
+dan kampus membentang sejauh 110 km. Waktu terus berjalan, tinggal satu jam menuju tengah
+malam, dan kantuk perlahan-lahan semakin menguasai.
+
+[[Sebaiknya aku segera mencari ponselku.]]
+Kepekaan +1, Kesehatan -1
+
+[[Capek banget buset!]]
+Kepekaan -1, Kesehatan +1
+
+
+:: Sebaiknya aku segera mencari ponselku.
+Bidang ini masih belum selesai.
+
+
+:: Capek banget buset!
+Setelah merasa lelah mencari ponsel, aku duduk di tepi kasur. Rasanya percuma melanjutkan
+pencarian sekarang. Waktu menunjukkan tengah malam dan kini suara burung hantu pemilik kos
+juga berbunyi makin kencang, "hoo hoooo." Aku merebahkan diri perlahan, menatap langit-langit
+kamar yang samar diterangi cahaya lampu. Pikiran tentang acara besok mulai memudar seiring
+rasa kantukku menguasai jiwaku.
+
+Sebelum benar-benar terlelap, sempat terlintas di benakku, apakah mereka tahu tentang jadwalku
+di esok hari?
