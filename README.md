@@ -4,7 +4,7 @@
 <table align="center" width="100%">
   <tr>
     <th>Title</th>
-    <td>The Hustle Journey</td>
+    <td>Hustle Journey</td>
   </tr>
   <tr>
     <th>Platform</th>
@@ -35,7 +35,7 @@
 <br />
 
 <p align="justify">
-The Hustle Journey is a text-based Role-playing Game (RPG) that tells the story of a young man who recently graduated with a Bachelor of Administration degree from the Penyengir University. Despite having a lot of internship experience, he is still unemployed due to the employment crisis in the country of Wakanda. To overcome this, he begins to utilize various resources around him in an effort to find a job. His father is a furniture maker, while his mother has experience as a cashier at the North Ngawi Supermarket. What is his journey of self-discovery and employment in the midst of the crisis? Let's get started!
+Hustle Journey is a text-based Role-playing Game (RPG) that tells the story of a young man who recently graduated with a Bachelor of Administration degree from the Penyengir University. Despite having a lot of internship experience, he is still unemployed due to the employment crisis in the country of Wakanda. To overcome this, he begins to utilize various resources around him in an effort to find a job. His father is a furniture maker, while his mother has experience as a cashier at the North Ngawi Supermarket. What is his journey of self-discovery and employment in the midst of the crisis? Let's get started!
 </p>
 
 > ### Tech Stack
