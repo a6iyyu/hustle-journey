@@ -1,34 +1,34 @@
 <h1 align="center">Hustle Journey</h1>
 
 > ### Game Overview
-<table align="center" width="100%">
+<table align="center">
   <tr>
     <th>Title</th>
-    <td>Hustle Journey</td>
+    <td style="width: 100%">Hustle Journey</td>
   </tr>
   <tr>
     <th>Platform</th>
-    <td>Desktop & Mobile</td>
+    <td style="width: 100%">Desktop & Mobile</td>
   </tr>
   <tr>
     <th>Genre</th>
-    <td>Text Based RPG</td>
+    <td style="width: 100%">Text Based RPG</td>
   </tr>
   <tr>
     <th>Rating</th>
-    <td>15+</td>
+    <td style="width: 100%">15+</td>
   </tr>
   <tr>
     <th>Target</th>
-    <td>Casual Player (aged 15+)</td>
+    <td style="width: 100%">Casual Player (aged 15+)</td>
   </tr>
   <tr>
     <th>Release Date</th>
-    <td>TBA</td>
+    <td style="width: 100%">TBA</td>
   </tr>
   <tr>
     <th>Publisher</th>
-    <td>Sapi Ucul Production</td>
+    <td style="width: 100%">Sapi Ucul Production</td>
   </tr>
 </table>
 
