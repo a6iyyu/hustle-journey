@@ -81,10 +81,8 @@ Tanpa berpikir panjang, kami bertiga menyerbu air terjun dengan pelampung ban di
 
 Kami bergantian menjaga barang dan bermain, menikmati liburan ini sepenuhnya.
 
-<<if $player.credits.charisma > 0>>
-<<include Player>>[[Lanjut ke Arung Jeram!->Mendayung adrenalin dan seruan penuh nyali]]  
-<<else>>  
-[[Saatnya berkemas dan pulang.->Kemas barang dan pulang]]
+<<if $player.credits.charisma > 0>><<include Player>>[[Lanjut ke Arung Jeram!->Mendayung adrenalin dan seruan penuh nyali]]  
+<<else>>[[Saatnya berkemas dan pulang.->Kemas barang dan pulang]]
 <</if>>
 
 
@@ -166,3 +164,81 @@ Langit senja terus bergulir, seiring mobil kami yang mulai melaju meninggalkan t
 Di balik senyum yang tertinggal dari perjalanan ini, ada bisikan kecil yang mengingatkan—aku belum siap menjadi orang dewasa sepenuhnya. Jika menjadi dewasa berarti hidup dalam rutinitas tanpa jeda, aku berharap setidaknya hari-hari seperti ini bisa menjadi titik terang yang selalu bisa kami ulangi.
 
 Mungkin tidak hari ini, tapi suatu saat nanti.
+
+[[Selanjutnya->Perbincangan kecil di dalam mobil]]
+
+
+:: Perbincangan kecil di dalam mobil
+<<if $player.credits.health > 0>><<include Player>>“Kamu kelihatan segar banget ya, tadi sempet tidur di mobil kan?” tanya salah satu temanku sambil tersenyum iseng.
+
+Aku tertawa kecil. “Lumayan, peregangan tadi bikin aku nggak gampang capek.”
+
+“Enak bener, bro. Gue masih kerasa pegel gara-gara angkat barang sendirian.”
+
+Aku menggaruk kepala, sedikit canggung. “Lagian, lo yang buru-buru tadi. Kalau cape di awal, bisa-bisa tumbang duluan.”
+
+Meski aku merasa bersalah, setidaknya tubuhku terasa lebih bugar sekarang.
+<<else>>“Gila, punggung gue pegel banget, kayaknya kecapekan.”
+
+Aku mengelus leherku yang terasa tegang. Salah satu temanku tertawa kecil. “Ya iyalah, lo yang paling gercep tadi.”
+
+Aku mengangguk, meski rasanya pegal ini mulai mengganggu. “Gapapa sih, yang penting cepet kelar tadi.”
+
+Mereka tertawa kecil, dan aku merasa puas karena bisa banyak membantu sejak awal.
+<</if>>
+[[Selanjutnya->Sampai di rumahku]]
+
+
+:: Sampai di rumahku
+Mobil berhenti di depan rumahku. Senja hampir habis, dan langit mulai dipenuhi bintang. Kami keluar satu per satu, mengambil barang-barang di bagasi.
+
+<<if $player.credits.health > 0>><<include Player>>Aku menghela napas panjang, merasa segar meski tubuh sedikit lelah. “Bro, nanti mampir makan dulu nggak? Gue masih kuat jalan,” ucapku pada diri sendiri, tapi sepertinya aku sudah mulai merasa lapar.
+
+Tapi lalu aku berpikir, "Ah, mending pulang aja deh. Besok ada upacara sarjana, masih banyak yang perlu dipersiapkan." Aku menatap teman-temanku yang sudah mulai membawa barang.
+
+[[“Ayo, gue juga masih seger nih!”]]
+@@color: green; + Health @@ @@color: red; - Financial Management @@
+
+[[“Kayaknya mending pulang aja, besok waktunya persiapan upacara sarjana.”]]
+@@color: green; + Time Management @@ @@color: red; - Patience @@
+
+<<else>>Aku merasa punggungku kaku, rasanya seperti baru saja dilatih habis-habisan. "Makan dulu kali ya? Gue butuh duduk bentar, punggung udah kaya papan," kataku dalam hati, mencoba mencari alasan untuk sedikit istirahat.
+
+Tapi kemudian, aku berpikir lagi, "Ah, badan udah capek banget. Mending langsung pulang aja, istirahat, dan siap-siap buat besok." Pikiranku berputar tentang apa yang harus dilakukan setelah sampai rumah.
+
+[[“Guys, ayo kita cari makan, udah lapar nih!”]]
+@@color: green; + Health @@ @@color: red; - Financial Management @@
+
+[[“Nggak deh, badan udah capek banget. Mending langsung pulang.”]]
+@@color: green; + Financial Management @@ @@color: green; + Health @@ @@color: red; - Patience  @@
+<</if>>
+
+
+:: “Ayo, gue juga masih seger nih!”
+<<set $player.credits.health += 1>><<set $player.credits.financial_management -= 1>>
+
+
+:: “Kayaknya mending pulang aja, besok waktunya persiapan upacara sarjana.”
+
+
+:: “Guys, ayo kita cari makan, udah lapar nih!”
+<<set $player.credits.health += 1>><<set $player.credits.financial_management -= 1>>"Eh, guys, gimana kalau kita makan dulu? Perut gue udah keroncongan banget nih!" seruku sambil mengangkat tas dari mobil.
+
+Teman-temanku saling melirik, lalu salah satu dari mereka tertawa kecil. "Eh, bukannya tadi lu yang bilang punggung lu kayak papan? Kok sekarang malah semangat makan gitu?"
+
+Aku terkekeh, mencoba menjelaskan sambil menggaruk kepala. "Iya sih, punggung gue emang pegel, tapi kalau udah ngomongin makan, rasanya segala lelah hilang aja. Apalagi ini udah jamnya makan."
+
+Salah satu temanku yang lain ikut tersenyum. “Yaudah deh, ikut aja. Tapi kalau nanti lu mulai ngeluh capek lagi, mending lu langsung pesen ojol, deh. Jangan sampai kayak di mobil tadi!” Dia menambahkan sambil tertawa kecil, seolah bercanda, tapi aku nggak yakin sama omongannya.
+
+Aku membalas sambil tertawa. "Gak bakal, bro. Gue beneran semangat makan!"
+
+“Yaudah, kalau gitu kita jalan bareng, yuk!” sahut temanku yang lain, ikut setuju. Kami semua pun bergegas menuju tempat makan terdekat, melupakan kelelahan dari perjalanan panjang tadi.
+
+[[Selanjutnya->Setibanya di restoran makan cepat saji]]
+
+
+:: Setibanya di restoran makan cepat saji
+
+
+:: “Nggak deh, badan udah capek banget. Mending langsung pulang.”
+<<set $player.credits.financial_management += 1>><<set $player.credits.health += 1>><<set $player.credits.patience -= 1>>

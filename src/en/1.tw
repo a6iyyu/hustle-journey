@@ -81,10 +81,8 @@ Without thinking, the three of us stormed the waterfall with our tire buoys in h
 
 We took turns looking after things and playing, enjoying this vacation to the fullest.
 
-<<if $player.credits.charisma > 0>>
-<<include Player>>[[Moving on to Rafting!->Paddling adrenaline and gutsy exclamations]]  
-<<else>>  
-[[It's time to pack up and go home.->Pack up and go home]]
+<<if $player.credits.charisma > 0>><<include Player>>[[Moving on to Rafting!->Paddling adrenaline and gutsy exclamations]]  
+<<else>>  [[It's time to pack up and go home.->Pack up and go home]]
 <</if>>
 
 
@@ -166,3 +164,81 @@ The twilight sky continued to roll in, as our car began to drive away from this 
 Behind the smile left behind from this trip, there's a small whisper that reminds me-I'm not ready to be a full-fledged adult. If being an adult means living in a routine without pause, I hope at least days like this can be a bright spot that we can always repeat.
 
 Maybe not today, but someday.
+
+[[Next->Small talk inside the car]]
+
+
+:: Small talk inside the car
+<<if $player.credits.health > 0>><<include Player>>“You look really fresh, didn't you sleep in the car earlier?” asked one of my friends with a playful smile.
+
+I chuckled. “Not bad, the stretching made me less tired.”
+
+“It's really good, bro. I'm still sore from lifting all by myself.”
+
+I scratched my head, a little awkwardly. “Besides, you were the one who rushed earlier. If you get tired at the beginning, you might fall down first.”
+
+Although I felt guilty, at least my body felt fitter now.
+<<else>>“Oh my, my back is really sore, I think I'm tired.”
+
+I stroked my neck, which felt tense. One of my friends chuckled. “That's right, you're the fastest.”
+
+I nodded, even though the soreness was starting to bother me. “It's okay, the important thing is that I finished quickly.”
+
+They chuckled, and I felt satisfied that I'd been able to help from the start.
+<</if>>
+[[Next->Arrive at my house]]
+
+
+:: Arrive at my house
+The car stopped in front of my house. Dusk was almost over, and the sky was beginning to fill with stars. We got out one by one, grabbing our belongings from the trunk.
+
+<<if $player.credits.health > 0>><<include Player>>I took a deep breath, feeling refreshed even though my body was a little tired. “Bro, will you stop by to eat first? I'm still going strong,” I said to myself, but it seemed like I was already starting to feel hungry.
+
+But then I thought, “Ah, I better go home. There's an undergraduate ceremony tomorrow, there's still a lot to prepare.” I looked at my friends who had started carrying things.
+
+[[“Come on, I'm still fresh too!”]]
+@@color: green; + Health@@ @@color: red; - Financial Management@@
+
+[[“I think it's better to go home, tomorrow is the time to prepare for the undergraduate ceremony.”]]
+@@color: green; + Time Management@@ @@color: red; - Patience@@
+
+<<else>>I felt my back stiffen, it felt like I had just been trained hard. “Do you want to eat first? I need to sit down for a while, my back is already like a board,” I said to myself, trying to find an excuse to rest a little.
+
+But then, I thought, “Ah, I'm already tired. Better just go home, rest, and get ready for tomorrow.” My mind was spinning about what to do once I got home.
+
+[[“Guys, let's go get something to eat, I'm hungry!”]]
+@@color: green; + Health@@ @@color: red; - Financial Management@@
+
+[[“No, I'm really tired, I'd better go home.”]]
+@@color: green; + Financial Management@@ @@color: green; + Health@@ @@color: red; - Patience @@
+<</if>>
+
+
+:: “Come on, I'm still fresh too!”
+<<set $player.credits.health += 1>><<set $player.credits.financial_management -= 1>>
+
+
+:: “I think it's better to go home, tomorrow is the time to prepare for the undergraduate ceremony.”
+
+
+:: “I think I'll join you, I'm hungry too.”
+<<set $player.credits.health += 1>><<set $player.credits.financial_management -= 1>>"Uh, guys, how about we eat first? My stomach is rumbling!” I exclaimed as I lifted my bag from the car.
+
+My friends glanced at each other, then one of them chuckled. “Uh, didn't you say your back was like a board? How come you're so excited to eat now?”
+
+I chuckled, trying to explain while scratching my head. “Yes, my back is really sore, but when I talk about eating, it feels like all the tiredness disappears. Especially when it's time to eat.”
+
+One of my other friends smiled. “Alright, just go with it. But if you start complaining about being tired again, you better order an online motorcycle taxi right away. Don't be like in the car earlier!” He added with a chuckle, as if he was joking, but I wasn't sure what he was talking about.
+
+I laughed back. “No way, bro. I'm really excited to eat!”
+
+“Alright, then let's go together!” my other friend agreed. We all rushed to the nearest eatery, forgetting the fatigue from the long journey earlier.
+
+[[Next->At the fast food restaurant]]
+
+
+:: At the fast food restaurant
+
+
+:: “No, I'm really tired, I'd better go home.”
+<<set $player.credits.financial_management += 1>><<set $player.credits.health += 1>><<set $player.credits.patience -= 1>>

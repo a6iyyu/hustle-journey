@@ -1,40 +1,42 @@
 :: Player
 <<silently>>
-    <<set $player =
-        {
-            "name": "",
-            "credits": {
-                "adaptation": 0,
-                "charisma": 0,
-                "creativity": 0,
-                "durability": 0,
-                "financial_management": 0,
-                "health": 0,
-                "initiative": 0,
-                "patience": 0,
-                "persistence": 0,
-                "popularity": 0,
-                "sensibility": 0,
-                "social_network": 0,
-                "technical_skills": 0,
-                "time_management": 0,
-                "thoroughness": 0,
-            },
-            "money": 500000,
-        }
-    >>
-    <<set $father =
-        {
-            "name": "",
-            "relationship": 0,
-        }
-    >>
-    <<set $mother =
-        {
-            "name": "",
-            "relationship": 0,      
-        }
-    >>
+    <<if $player is undefined>>
+        <<set $player =
+            {
+                "name": "",
+                "credits": {
+                    "adaptation": 0,
+                    "charisma": 0,
+                    "creativity": 0,
+                    "durability": 0,
+                    "financial_management": 0,
+                    "health": 0,
+                    "initiative": 0,
+                    "patience": 0,
+                    "persistence": 0,
+                    "popularity": 0,
+                    "sensibility": 0,
+                    "social_network": 0,
+                    "technical_skills": 0,
+                    "time_management": 0,
+                    "thoroughness": 0,
+                },
+                "money": 500000,
+            }
+        >>
+        <<set $father =
+            {
+                "name": "",
+                "relationship": 0,
+            }
+        >>
+        <<set $mother =
+            {
+                "name": "",
+                "relationship": 0,      
+            }
+        >>
+    <</if>>
 <</silently>>
 
 
@@ -124,22 +126,3 @@ In Hustle Journey, your character's growth is defined by various attributes that
         <td>Minimizes mistakes and enhances product quality.</td>
     </tr>
 </table>
-
-
-:: Userstylesheet [stylesheet]
-table {
-    border-collapse: collapse;
-}
-
-th,
-td {
-    border: 1px solid #dddddd;
-}
-
-th {
-    text-align: center;
-}
-
-tr:nth-child(even) {
-    background-color: #2e2e2e;
-}
