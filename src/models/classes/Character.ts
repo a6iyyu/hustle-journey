@@ -1,15 +1,3 @@
-enum SexType {
-  Masculine,
-  Feminime,
-  Hermaphrodite,
-}
-
-enum ApparelSlot {
-  Head,
-  Body,
-  Legs,
-  Feet,
-}
 namespace model {
   export class Character {
     id: string;
