@@ -1,4 +1,4 @@
-namespace model {
+namespace enums {
   export enum ApparelSlot {
     Head,
     Body,

@@ -14,9 +14,9 @@ Hustle Journey
 
 
 :: StoryMenu
+[[About]]
 [[Personality]]
 [[Stats]]
-[[About]]
 
 
 :: Userstylesheet [stylesheet]
@@ -54,13 +54,12 @@ tr:nth-child(even) {
 [[Back->Welcome]]
 
 
+:: About
+!! About
+[[Back->Welcome]]
+
+
 :: Welcome
-@@cursor: default;What happens after graduation? Life isn't always as easy as landing a job right after college. In Hustle Journey, you step into the shoes of a fresh graduate who must juggle multiple roles in order to survive. Experience the fun, challenges, and tough decisions of being a jack-of-all-trades while navigating life after university in search of success.@@
+Apa yang terjadi setelah kelulusan? Hidup tidak selalu semudah mendapatkan pekerjaan setelah lulus dari perguruan tinggi. Di Hustle Journey, kamu akan berperan sebagai seorang //fresh graduate// yang harus menjalani berbagai peran untuk bertahan hidup. Rasakan keseruan, tantangan, dan keputusan sulit sebagai seorang yang memiliki banyak keahlian sambil mengarungi kehidupan setelah lulus kuliah untuk meraih kesuksesan.
 
-[[Next->Select the language]]
-
-
-:: Select the language
-!! Select the language:
-[[English->Vacation to tourist attractions]]
-[[Bahasa Indonesia->Berlibur ke tempat wisata]]
+[[Next->Berlibur ke tempat wisata]]

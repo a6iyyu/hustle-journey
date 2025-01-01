@@ -1,7 +1,7 @@
 {
   "tasks": [
     {
-      "command": "tweego -w -o index.html source",
+      "command": "tweego -w -o index.html .vscode public src",
       "isBackground": true,
       "label": "Tweego",
       "type": "shell",

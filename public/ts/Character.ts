@@ -3,17 +3,17 @@ namespace model {
     id: string;
     forename: string | null;
     surname: string;
-    sexType: SexType;
+    sexType: enums.SexType;
     intAge: number;
-    private _fat: number;
+    private _fat: number = 0;
     private _muscle: number;
-    EquippedApparels: Map<ApparelSlot, Apparel[]>;
+    EquippedApparels: Map<enums.ApparelSlot, ts.Apparel[]>;
 
     constructor(
       id: string = "",
       forename: string | null = null,
       surname: string = "",
-      sexType: SexType = SexType.Masculine,
+      sexType: enums.SexType = enums.SexType.Masculine,
       intAge: number = 18,
       fat: number = 0,
       muscle: number = 0
@@ -23,17 +23,17 @@ namespace model {
       this.surname = surname;
       this.sexType = sexType;
       this.intAge = intAge;
-      this.fat = Math.min(Math.max(fat, 0), 6);
+      this._fat = Math.min(Math.max(fat, 0), 6);
       this._muscle = Math.min(Math.max(muscle, 0), 6);
       this.EquippedApparels = new Map();
     }
 
     get fat(): number {
-      return this.fat;
+      return this._fat;
     }
 
     set fat(value: number) {
-      this.fat = Math.min(Math.max(value, 0), 6);
+      this._fat = Math.min(Math.max(value, 0), 6);
     }
 
     get muscle(): number {
@@ -44,39 +44,16 @@ namespace model {
       this._muscle = Math.min(Math.max(value, 0), 6);
     }
 
+    // prettier-ignore
     get physique(): string {
       const bodyTypes = [
         ["Emaciated", "Thin", "Lean", "Toned", "Defined", "Sculpted", "Ripped"],
         ["Gaunt", "Slender", "Slim", "Fit", "Taut", "Cut", "Shredded"],
-        [
-          "Underweight",
-          "Svelte",
-          "Lithe",
-          "Athletic",
-          "Muscular",
-          "Built",
-          "Solid",
-        ],
+        ["Underweight", "Svelte", "Lithe", "Athletic", "Muscular", "Built", "Solid"],
         ["Average", "Wiry", "Balanced", "Stocky", "Husky", "Buff", "Hefty"],
-        [
-          "Soft",
-          "Slightly Firm",
-          "Firm",
-          "Bulky",
-          "Strong",
-          "Burly",
-          "Massive",
-        ],
+        ["Soft", "Slightly Firm", "Firm", "Bulky", "Strong", "Burly", "Massive"],
         ["Pudgy", "Chubby", "Stout", "Robust", "Thick", "Powerhouse", "Brawny"],
-        [
-          "Overweight",
-          "Portly",
-          "Heavyset",
-          "Large",
-          "Hulking",
-          "Gargantuan",
-          "Herculean",
-        ],
+        ["Overweight", "Portly", "Heavyset", "Large", "Hulking", "Gargantuan", "Herculean"],
       ];
       return bodyTypes[Math.min(this.fat, 6)][Math.min(this.muscle, 6)];
     }
@@ -94,50 +71,48 @@ namespace model {
     }
 
     get sexToAgeDescriptor(): string {
-      if (this.sexType === SexType.Masculine) {
+      if (this.sexType === enums.SexType.Masculine) {
         return this.intAge <= 21 ? "Boy" : "Man";
-      } else if (this.sexType === SexType.Feminime) {
+      } else if (this.sexType === enums.SexType.Feminime) {
         return this.intAge <= 21 ? "Girl" : "Woman";
       }
       return "Hermaphrodite";
     }
 
-    equipApparel(apparel: Apparel): void {
+    equipApparel(apparel: ts.Apparel): void {
       if (!this.EquippedApparels.has(apparel.apparelSlot)) {
         this.EquippedApparels.set(apparel.apparelSlot, []);
       }
       this.EquippedApparels.get(apparel.apparelSlot)!.push(apparel);
     }
 
+    // prettier-ignore
     printCoveredBodyPart(): string {
-      const coveredParts = new Set<BodyCoverage>();
+      const coveredParts = new Set<enums.BodyCoverage>();
       this.EquippedApparels.forEach((apparels) =>
         apparels.forEach((apparel) =>
-          apparel.bodyCoverages.forEach((coverage) =>
-            coveredParts.add(coverage)
-          )
+          apparel.bodyCoverages.forEach(coverage => coveredParts.add(coverage))
         )
       );
       return Array.from(coveredParts).join(", ");
     }
 
-    getCoveredBodyPart(): BodyCoverage[] {
-      const coveredParts = new Set<BodyCoverage>();
+    // prettier-ignore
+    getCoveredBodyPart(): enums.BodyCoverage[] {
+      const coveredParts = new Set<enums.BodyCoverage>();
       this.EquippedApparels.forEach((apparels) =>
         apparels.forEach((apparel) =>
-          apparel.bodyCoverages.forEach((coverage) =>
-            coveredParts.add(coverage)
-          )
+          apparel.bodyCoverages.forEach((coverage) => coveredParts.add(coverage))
         )
       );
       return Array.from(coveredParts);
     }
 
-    getApparelsByApparelSlot(apparelSlot: ApparelSlot): Apparel[] {
+    getApparelsByApparelSlot(apparelSlot: enums.ApparelSlot): ts.Apparel[] {
       return this.EquippedApparels.get(apparelSlot) || [];
     }
 
-    getApparels(): Apparel[] {
+    getApparels(): ts.Apparel[] {
       return Array.from(this.EquippedApparels.values()).flat();
     }
 
@@ -152,7 +127,6 @@ namespace model {
     writeIntoJSONFile(): void {
       const jsonString = JSON.stringify(this);
       console.log("Character JSON:", jsonString);
-      // Save to file using Node.js if needed
     }
   }
 }

@@ -1,18 +1,18 @@
-namespace model {
+namespace ts {
   export class Apparel {
     id: string;
     basicName: string;
-    apparelSlot: ApparelSlot;
+    apparelSlot: enums.ApparelSlot;
     color: string;
     pattern: string;
     material: string;
     integrity: number;
-    bodyCoverages: Set<BodyCoverage>;
+    bodyCoverages: Set<enums.BodyCoverage>;
 
     constructor(
       id: string,
       basicName: string,
-      apparelSlot: ApparelSlot,
+      apparelSlot: enums.ApparelSlot,
       color: string,
       pattern: string,
       material: string,
@@ -25,6 +25,7 @@ namespace model {
       this.pattern = pattern;
       this.material = material;
       this.integrity = integrity;
+      this.bodyCoverages = new Set<enums.BodyCoverage>();
     }
   }
 }

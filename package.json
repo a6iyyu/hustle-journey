@@ -1,0 +1,26 @@
+{
+  "name": "hustle-project",
+  "version": "1.0.0",
+  "description": "A text-based Role-playing Game (RPG) that tells the story of a young man after graduation from college. Built using Tweego.",
+  "main": "./public/js/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a6iyyu/hustle-journey.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/a6iyyu/hustle-journey/issues"
+  },
+  "homepage": "https://github.com/a6iyyu/hustle-journey#readme",
+  "dependencies": {
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.7.2"
+  }
+}
