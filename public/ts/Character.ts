@@ -9,23 +9,17 @@ namespace model {
     private _muscle: number;
     EquippedApparels: Map<enums.ApparelSlot, ts.Apparel[]>;
 
-    // skill dari stats.tw -er
-    // this is a straight conversion. will be revised by GM later
-    private _adaptation: number = 0;
-    private _charisma: number = 0;
-    private _creativity= 0;
-    private _durability: number = 0;
-    private _financial_management: number = 0;
-    private _health: number = 0; // ini bagusnya taruh di object baru namanya life_cost / ability -er
-    private _initiative: number = 0;
-    private _patience: number = 0;
-    private _persistence: number = 0;
-    private _popularity: number = 0;
-    private _sensibility: number = 0;
-    private _social_network: number = 0;
-    private _technical_skills: number = 0;
-    private _time_management: number = 0;
-    private _thoroughness: number = 0;
+    // needs
+    rest: Need;
+    painlessness: Need;
+    satiety: Need;
+    comfort: Need;
+    entertainment: Need;
+    social: Need;
+    hygiene: Need;
+
+    // skills
+    charisma: Skill;
 
     constructor(
       id: string = "",
@@ -34,7 +28,15 @@ namespace model {
       sexType: enums.SexType = enums.SexType.Masculine,
       intAge: number = 18,
       fat: number = 0,
-      muscle: number = 0
+      muscle: number = 0,
+      rest: Need = new Need(100),
+      painlessness: Need = new Need(100),
+      satiety: Need = new Need(100),
+      comfort: Need = new Need(100),
+      entertainment: Need = new Need(100),
+      social: Need = new Need(100),
+      hygiene: Need = new Need(100),
+      charisma: Skill = new Skill(1)
     ) {
       this.id = id;
       this.forename = forename;
@@ -44,6 +46,14 @@ namespace model {
       this._fat = Math.min(Math.max(fat, 0), 6);
       this._muscle = Math.min(Math.max(muscle, 0), 6);
       this.EquippedApparels = new Map();
+      this.rest = rest;
+      this.painlessness = painlessness;
+      this.satiety = satiety;
+      this.comfort = comfort;
+      this.entertainment = entertainment;
+      this.social = social;
+      this.hygiene = hygiene;
+      this.charisma = charisma;
     }
 
     get fat(): number {
@@ -51,15 +61,14 @@ namespace model {
     }
 
     set fat(value: number) {
-      this._fat = Math.min(Math.max(value, 0), 6);
+      this._fat = Mathe.clamp(value, 0, 6);
     }
 
     get muscle(): number {
       return this._muscle;
     }
-
     set muscle(value: number) {
-      this._muscle = Math.min(Math.max(value, 0), 6);
+      this._muscle = Mathe.clamp(value, 0, 6);
     }
 
     // prettier-ignore
@@ -103,29 +112,6 @@ namespace model {
       }
       this.EquippedApparels.get(apparel.apparelSlot)!.push(apparel);
     }
-
-    // prettier-ignore
-    printCoveredBodyPart(): string {
-      const coveredParts = new Set<enums.BodyCoverage>();
-      this.EquippedApparels.forEach((apparels) =>
-        apparels.forEach((apparel) =>
-          apparel.bodyCoverages.forEach(coverage => coveredParts.add(coverage))
-        )
-      );
-      return Array.from(coveredParts).join(", ");
-    }
-
-    // prettier-ignore
-    getCoveredBodyPart(): enums.BodyCoverage[] {
-      const coveredParts = new Set<enums.BodyCoverage>();
-      this.EquippedApparels.forEach((apparels) =>
-        apparels.forEach((apparel) =>
-          apparel.bodyCoverages.forEach((coverage) => coveredParts.add(coverage))
-        )
-      );
-      return Array.from(coveredParts);
-    }
-
     getApparelsByApparelSlot(apparelSlot: enums.ApparelSlot): ts.Apparel[] {
       return this.EquippedApparels.get(apparelSlot) || [];
     }
