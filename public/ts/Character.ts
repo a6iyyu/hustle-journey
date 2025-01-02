@@ -5,9 +5,27 @@ namespace model {
     surname: string;
     sexType: enums.SexType;
     intAge: number;
-    private _fat: number = 0;
+    private _fat: number;
     private _muscle: number;
     EquippedApparels: Map<enums.ApparelSlot, ts.Apparel[]>;
+
+    // skill dari stats.tw -er
+    // this is a straight conversion. will be revised by GM later
+    private _adaptation: number = 0;
+    private _charisma: number = 0;
+    private _creativity= 0;
+    private _durability: number = 0;
+    private _financial_management: number = 0;
+    private _health: number = 0; // ini bagusnya taruh di object baru namanya life_cost / ability -er
+    private _initiative: number = 0;
+    private _patience: number = 0;
+    private _persistence: number = 0;
+    private _popularity: number = 0;
+    private _sensibility: number = 0;
+    private _social_network: number = 0;
+    private _technical_skills: number = 0;
+    private _time_management: number = 0;
+    private _thoroughness: number = 0;
 
     constructor(
       id: string = "",
