@@ -1,12 +1,17 @@
 namespace model {
   export class Character {
+    // main attributes
     id: string;
     forename: string | null;
     surname: string;
+
+    // appearance magnitude
     sexType: enums.SexType;
     intAge: number;
     private _fat: number;
     private _muscle: number;
+
+    // equipped apparels
     EquippedApparels: Map<enums.ApparelSlot, ts.Apparel[]>;
 
     // needs
