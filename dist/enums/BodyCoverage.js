@@ -1,0 +1,36 @@
+"use strict";
+var enums;
+(function (enums) {
+    var BodyCoverage;
+    (function (BodyCoverage) {
+        BodyCoverage[BodyCoverage["Crown"] = 0] = "Crown";
+        BodyCoverage[BodyCoverage["Face"] = 1] = "Face";
+        BodyCoverage[BodyCoverage["HeadBack"] = 2] = "HeadBack";
+        BodyCoverage[BodyCoverage["HeadSide"] = 3] = "HeadSide";
+        BodyCoverage[BodyCoverage["Neck"] = 4] = "Neck";
+        BodyCoverage[BodyCoverage["Shoulders"] = 5] = "Shoulders";
+        BodyCoverage[BodyCoverage["UpperChest"] = 6] = "UpperChest";
+        BodyCoverage[BodyCoverage["Breasts"] = 7] = "Breasts";
+        BodyCoverage[BodyCoverage["LowerChest"] = 8] = "LowerChest";
+        BodyCoverage[BodyCoverage["UpperAbdomen"] = 9] = "UpperAbdomen";
+        BodyCoverage[BodyCoverage["LowerAbdomen"] = 10] = "LowerAbdomen";
+        BodyCoverage[BodyCoverage["UpperBack"] = 11] = "UpperBack";
+        BodyCoverage[BodyCoverage["LowerBack"] = 12] = "LowerBack";
+        BodyCoverage[BodyCoverage["UpperTorsoSides"] = 13] = "UpperTorsoSides";
+        BodyCoverage[BodyCoverage["LowerTorsoSides"] = 14] = "LowerTorsoSides";
+        BodyCoverage[BodyCoverage["UpperArms"] = 15] = "UpperArms";
+        BodyCoverage[BodyCoverage["LowerArms"] = 16] = "LowerArms";
+        BodyCoverage[BodyCoverage["Hands"] = 17] = "Hands";
+        BodyCoverage[BodyCoverage["Hips"] = 18] = "Hips";
+        BodyCoverage[BodyCoverage["Crotch"] = 19] = "Crotch";
+        BodyCoverage[BodyCoverage["Buttocks"] = 20] = "Buttocks";
+        BodyCoverage[BodyCoverage["Anus"] = 21] = "Anus";
+        BodyCoverage[BodyCoverage["UpperThighs"] = 22] = "UpperThighs";
+        BodyCoverage[BodyCoverage["LowerThighs"] = 23] = "LowerThighs";
+        BodyCoverage[BodyCoverage["Knees"] = 24] = "Knees";
+        BodyCoverage[BodyCoverage["UpperCalves"] = 25] = "UpperCalves";
+        BodyCoverage[BodyCoverage["LowerCalves"] = 26] = "LowerCalves";
+        BodyCoverage[BodyCoverage["Insteps"] = 27] = "Insteps";
+        BodyCoverage[BodyCoverage["Soles"] = 28] = "Soles";
+    })(BodyCoverage = enums.BodyCoverage || (enums.BodyCoverage = {}));
+})(enums || (enums = {}));
