@@ -20,26 +20,7 @@
 
 
 :: Userstylesheet [stylesheet]
-#menu-item-restart {
-	display: none;
-}
 
-table {
-    border-collapse: collapse;
-}
-
-th,
-td {
-    border: 1px solid #dddddd;
-}
-
-th {
-    text-align: center;
-}
-
-tr:nth-child(even) {
-    background-color: #2e2e2e;
-}
 
 
 :: Personality
@@ -62,6 +43,6 @@ tr:nth-child(even) {
 :: Start
 Apa yang terjadi setelah kelulusan? Hidup tidak selalu semudah mendapatkan pekerjaan setelah lulus dari perguruan tinggi. Di Hustle Journey, kamu akan berperan sebagai seorang //fresh graduate// yang harus menjalani berbagai peran untuk bertahan hidup. Rasakan keseruan, tantangan, dan keputusan sulit sebagai seorang yang memiliki banyak keahlian sambil mengarungi kehidupan setelah lulus kuliah untuk meraih kesuksesan.
 <<print playerCharacter.forename>>
-<<print playerCharacter.forename>>
+<<print playerCharacter.surname>>
 
 [[Next->Berlibur ke tempat wisata]]
