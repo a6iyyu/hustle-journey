@@ -1,0 +1,51 @@
+===========Compile to HTML
+    > Twine 2 
+* Put all code files in the 'source' folder (.tw, .js, .css, more)
+* Open the terminal (CTRL + `) or (View->Terminal)
+* Make sure it's set on the right shell (+˅ icon)
+    * 'cmd' (Windows)
+    * 'bash' or 'zsh' (MacOS) (+ icon to change)
+* Copy/paste/enter: 
+    build
+  OR 
+    build.bat (Windows) - ./build.sh (MacOS)
+* Find 'index.html' in the 'export' folder
+
+    > Twine 1
+* Put all code files in the 'source' folder (.tw, .js, .css, more)
+* Open the terminal (CTRL + `) or (View->Terminal)
+* Make sure it's set on the right shell (+˅ icon)
+    * 'cmd' (Windows)
+    * 'bash' or 'zsh' (MacOS) (+ icon to change)
+* Copy/paste/enter: 
+    call tweego -l -f FORMAT -o export/index.html source
+  WHERE
+    FORMAT should be the Twine 1 format to use
+* Find 'index.html' in the 'export' folder
+
+
+===========Compile to HTML(debug)
+    > Twine 2 
+* Put all code files in the 'source' folder (.tw, .js, .css, more)
+* Open the terminal (CTRL + `) or (View->Terminal)
+* Make sure it's set on the right shell (+˅ icon)
+    * 'cmd' (Windows)
+    * 'bash' or 'zsh' (MacOS) (+ icon to change)
+* Copy/paste/enter: 
+    debug
+  OR 
+    debug.bat (Windows) - ./debug.sh (MacOS)
+* Find 'index.html' in the 'export' folder
+
+
+===========Decompile to Twee
+* Put all code files in the 'decompile' folder (.html, more)
+* Open the terminal (CTRL + `) or (View->Terminal)
+* Make sure it's set on the right shell (+˅ icon)
+    * 'cmd' (Windows)
+    * 'bash' or 'zsh' (MacOS) (+ icon to change)
+* Copy/paste/enter: 
+    decompile
+  OR 
+    decompile.bat (Windows) - ./decompile.sh (MacOS)
+* Find 'decompiled.tw' in the 'source' folder
