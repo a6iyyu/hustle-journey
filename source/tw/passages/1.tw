@@ -1,0 +1,263 @@
+:: Berlibur ke tempat wisata
+Siang ini udara terasa sejuk, dan langit biru membentang luas di atas kepala kami. Suara mesin mobil meraung, berusaha menaklukkan tanjakan menuju air terjun yang jaraknya puluhan kilometer dari pusat kota. Di dalam mobil, suasana begitu hidup. Kami tertawa dan berbagi cerita, mulai dari lelahnya begadang demi menyusun bab demi bab skripsi hingga momen mendebarkan saat sidang akhir.
+
+Rasanya seperti beban yang selama ini menempel di punggung mulai terangkat, digantikan oleh kebahagiaan sederhana ini. Jalanan berkelok-kelok, tetapi waktu terasa berlalu begitu cepat. Tanpa sadar, gemuruh air terjun mulai terdengar samar-samar, menyambut kami di kejauhan.
+
+Hari ini bukan hanya tentang perjalanan ke air terjun, tapi juga merayakan perjuangan yang telah kami lalui bersama.
+
+[[Selanjutnya->Persiapan memasuki tempat wisata]]
+
+
+:: Persiapan memasuki tempat wisata
+Kami berempat turun dari mobil, tubuh terasa kaku setelah berjam-jam duduk. Aku menarik napas dalam-dalam, membiarkan udara segar dari alam terbuka mengisi paru-paru. Sembari aku melakukan perengangan, teman-temanku mulai menurunkan barang-barang seperti tas besar, perbekalan, dan peralatan lainnya.
+
+[[Lanjutin peregangan aja, soalnya cape banget!]]
+@@color: green; + Health @@ @@color: red; - Initiative @@
+
+[[Aku bantuin mereka deh.]]
+@@color: green; + Initiative @@ @@color: red; - Health @@
+
+
+:: Lanjutin peregangan aja, soalnya cape banget!
+<<include Player>><<set $player.credits.health += 1>><<set $player.credits.initiative -= 1>>Aku mengangkat tangan ke atas, memutar badan perlahan. Rasanya terlalu nyaman untuk melanjutkan peregangan. Matahari siang terasa hangat di kulit, dan hembusan angin membuat mataku sedikit terpejam. Teman-temanku sibuk sendiri, tapi aku memilih menikmati momen ini sebentar lagi. Lagipula, aku butuh tenaga untuk berjalan kaki nanti.
+
+[[Selanjutnya->Lamunan di antara ribuan manusia]]
+
+
+:: Aku bantuin mereka deh.
+<<include Player>><<set $player.credits.initiative += 1>><<set $player.credits.health -= 1>>Peregangan sebentar sudah cukup untuk mengembalikan staminaku. Aku pergi mendekati teman-temanku yang ada di belakang mobil. "Sini aku bantu." Tanpa pikir panjang, aku mulai mengangkat beberapa perlengkapan pribadi dan membawanya ke tempat yang agak teduh. Keringat mulai membasahi punggung, tapi aku merasa lega bisa menyelesaikan semuanya lebih cepat. Ini adalah liburan di hari yang istimewa, dan aku ingin segera menikmatinya.
+
+[[Selanjutnya->Lamunan di antara ribuan manusia]]
+
+
+:: Lamunan di antara ribuan manusia
+Setelah semua barang selesai diturunkan, kami mulai melanjutkan perjalanan dengan berjalan kaki. Jalan setapak di depan terasa panjang, mungkin masih sekitar dua kilometer lagi menuju air terjun. Di sepanjang jalan, suara tawa anak-anak terdengar riuh, berlarian membeli jajanan dari lapak-lapak kecil di kanan dan kiri. Para orang tua duduk di bangku kayu, mengawasi mereka dari kejauhan dengan wajah penuh kasih.
+
+Aku melangkah pelan, sesekali membiarkan pandangan mengembara. Rasanya damai, tapi pikiranku justru melayang jauh. Entah kenapa, melihat anak-anak dan keluarga ini membuatku bertanya-tanya, "Apakah suatu hari nanti aku juga akan seperti ini? Menikmati waktu bersama keluarga kecilku?"
+
+Tiba-tiba, sebuah tepukan di pundak membuatku tersentak.
+
+“Woi! Tatapanmu kosong banget. Lagi mikirin apa, hah? Skripsi udah kelar lho! Trauma skripsi, ya? Hahaha!” canda salah satu temanku, tertawa lepas di sampingku.
+
+Aku hanya tersenyum tipis. Mungkin benar, bayang-bayang skripsi memang belum sepenuhnya pergi. Tapi hari ini, aku ingin menikmati perjalanan ini.
+
+[[Selanjutnya->Mulai melepaskan trauma setelah skripsi]]
+
+
+:: Mulai melepaskan trauma setelah skripsi
+Di tengah perjalanan menuju tempat wisata, kami memutuskan untuk menyewa beberapa peralatan, seperti pelampung ban, kacamata renang, dan perlengkapan lainnya. Namun, ada satu hal yang tidak kami ketahui sebelumnya, bahwa tempat ini ternyata memiliki wahana arung jeram! Kami berempat saling memandang, semangat kami mulai membara. Tanpa ragu, kami pun mulai berdiskusi apakah sebaiknya mencoba wahana tersebut atau tidak.
+
+[[Cobain aja, hidup cuman sekali, guys!]]
+@@color: green; + Charisma @@ @@color: red; - Financial Management @@
+
+[[Nggak dulu deh, duit kami pas-pasan.]]
+@@color: green; + Financial Management @@ @@color: red; - Patience @@
+
+
+:: Cobain aja, hidup cuman sekali, guys!
+<<include Player>><<set $player.credits.charisma += 1>><<set $player.credits.financial_management -= 1>>"Ya, ayo aja! Hidup cuma sekali, siapa takut?" aku ikut mendukung. Kami semua tertawa, dan semangat pun semakin membara. Mengambil keputusan seperti ini terasa menantang, tetapi seperti inilah liburan seharusnya, yang penuh warna dan pengalaman baru.
+
+[[Selanjutnya->Menyelam dalam keseruan]]
+
+
+:: Nggak dulu deh, duit kami pas-pasan.
+<<include Player>><<set $player.credits.financial_management += 1>><<set $player.credits.patience -= 1>>Aku ragu sejenak, memikirkan anggaran yang sudah hampir menipis. “Kayaknya kita mesti nahan diri deh, guys. Duit kita pas-pasan.” Aku memilih untuk menenangkan diri dan mengingatkan teman-temanku tentang pengelolaan keuangan yang bijaksana. Mungkin lain kali.
+
+[[Selanjutnya->Menyelam dalam keseruan]]
+
+
+:: Menyelam dalam keseruan
+Gemuruh air terjun menggema, suaranya seakan memenuhi seluruh ruang di telingaku. Butiran air yang terbawa angin sesekali menyentuh wajah, memberikan sensasi segar yang membangkitkan semangat. Untungnya, tempat ini tidak terlalu ramai. Hanya beberapa orang yang terlihat berendam di tepian atau sekadar duduk menikmati derasnya aliran air dari kejauhan.
+
+Kami berempat bergerak cepat, meletakkan barang bawaan di sudut yang cukup aman namun tak terlalu jauh dari air terjun. Suasana sejuk dan aliran air yang berkilau di bawah sinar matahari seperti memanggil kami.
+
+“Ayo, bro! Gue udah nggak sabar, langsung nyebur aja!” seru salah satu temanku dengan penuh antusias. Tanpa berpikir panjang, kami bertiga langsung menyerbu ke arah air terjun, masing-masing membawa pelampung ban yang tadi disewa. Gelak tawa dan suara cipratan air bercampur jadi satu, mengisi udara siang itu dengan keceriaan.
+
+Sementara itu, satu teman kami memilih untuk berjaga di dekat barang-barang, sesekali melirik ke arah kami yang sudah asyik bermain. Kami bergantian menjaga, memastikan semuanya tetap aman sambil menikmati liburan ini sepuasnya.
+
+"Ayo bro, ga usa basa-basi langsung nyebur aja." Akhirnya kami bertiga menyerbu air terjun sambil membawa pelampung ban masing-masing, sedangkan satu lainnya menjaga tempat secara bergantian.
+
+Tanpa berpikir panjang, kami bertiga menyerbu air terjun dengan pelampung ban di tangan. Sementara itu, satu teman berjaga, sesekali melirik kami yang asyik bermain.
+
+Kami bergantian menjaga barang dan bermain, menikmati liburan ini sepenuhnya.
+
+<<if $player.credits.charisma > 0>><<include Player>>[[Lanjut ke Arung Jeram!->Mendayung adrenalin dan seruan penuh nyali]]  
+<<else>>[[Saatnya berkemas dan pulang.->Kemas barang dan pulang]]
+<</if>>
+
+
+:: Mendayung adrenalin dan seruan penuh nyali
+Setelah puas bermain dan menikmati derasnya air terjun selama hampir satu jam, kami mulai berkemas. Setiap barang kami tata kembali ke dalam tas, memastikan tidak ada yang tertinggal. Kemudian, secara bergantian, kami menuju kamar mandi untuk membersihkan diri. Hari yang penuh keceriaan ini belum berakhir, petualangan berikutnya sudah menanti. Arung jeram!
+
+Di titik awal wahana, perahu karet berwarna gelap mengapung tenang di pinggir sungai. Udara dingin di sekitar air terjun terasa lebih menyengat saat helm dan pelampung mulai kami kenakan. Instruktur berdiri tegap di depan kami, memberikan arahan dengan suara lantang dan percaya diri. Namun, jujur saja, suara gemuruh air sungai di kejauhan lebih mendominasi pikiranku.
+
+“Bro, ini bakal jadi cerita yang kita ingat terus!” seru salah satu temanku sambil menepuk bahuku. Senyumku mengembang. Ada rasa antusias bercampur ketegangan, tetapi justru itulah yang membuatnya semakin seru.
+
+Kami berempat menaiki perahu dengan hati berdebar. Aku memegang erat dayung di tanganku, siap menaklukkan derasnya arus sungai yang menanti di depan.
+
+[[Selanjutnya->Derasnya aliran sungai membasahi kami]]
+
+
+:: Derasnya aliran sungai membasahi kami
+“Gila! Ini sungainya ngeri banget!” teriak salah satu temanku begitu perahu kami mulai meluncur ke arus deras.
+
+Percikan air membasahi wajah dan pakaian kami, sementara arus membawa perahu dengan kecepatan yang sulit dikendalikan.
+
+“Awas, awas! Kayaknya perahunya mau miring!” ujar temanku yang duduk di depan dengan suara sedikit panik.
+
+“Tenang! Jangan panik, gue pegangin!” sahut yang lain, meski jelas terdengar keraguan di suaranya.
+
+Dari belakang, suara instruktur terdengar penuh ketenangan, seperti tidak terpengaruh sama sekali oleh situasi ini. “Santai aja, semua masih aman. Kalau terlalu miring, tinggal condongin badan ke sisi sebaliknya.”
+
+Aku menoleh sedikit ke arahnya. Instruktur itu masih muda, mungkin tidak jauh beda dengan kami, tapi aura percaya dirinya memancarkan pengalaman bertahun-tahun.
+
+Sesaat kemudian, perahu menghantam batu besar di tengah sungai, membuat kami terlonjak. Tawa dan teriakan bercampur jadi satu, seolah arus deras ini sedang bermain-main dengan kami. Petualangan ini benar-benar di luar dugaan, dan setiap detik di atas perahu ini terasa seperti bagian dari cerita yang akan terus kami kenang.
+
+[[Selanjutnya->Apakah akan menjadi swafoto terakhir?]]
+
+
+:: Kemas barang dan pulang
+Tak terasa satu jam berlalu sejak kami mulai berendam di bawah derasnya air terjun. Dinginnya aliran air yang mengalir deras dari ketinggian meninggalkan sensasi segar di kulit, seolah meluruhkan semua rasa penat dan beban pikiran. Canda tawa bersama teman-teman menjadi momen yang terasa begitu berharga, seperti hadiah kecil setelah perjuangan panjang menghadapi skripsi dan persidangan akhir.
+
+Setelah puas berendam di bawah air terjun, kami mulai menepi, membiarkan sisa-sisa tetesan mengalir perlahan dari rambut sampai ujung kaki. Udara pegunungan yang sejuk membuat kami enggan beranjak, tetapi waktu terus berjalan. Kami pun memutuskan untuk menuju kamar mandi, mengeringkan tubuh dan membersihkan diri sebelum meninggalkan tempat ini.
+
+Sementara sebagian dari kami bergantian ke kamar mandi, yang lainnya mulai mengemasi barang bawaan. Karpet yang semula terhampar rapi di atas tanah mulai digulung, tempat makan yang sebelumnya menjadi wadah bekal bersama juga ditutup rapat dan disusun dalam tas. Tak lupa, kami memungut setiap sampah yang berserakan, memastikan tak ada jejak yang tertinggal.
+
+"Ayo, kita pastikan nggak ada yang ketinggalan," ujar salah satu temanku sambil melirik area sekitar.
+
+Aku menatap air terjun sekali lagi, seakan ingin mengabadikan pemandangan ini dalam ingatan. Hari ini adalah pengingat bahwa kebahagiaan sederhana sering kali datang dari momen-momen kecil seperti ini—kebersamaan, canda, dan tawa yang tulus.
+
+Setelah semua siap, kami mulai berjalan kembali menuju parkiran, membawa serta kenangan yang akan kami ceritakan berulang kali di masa depan.
+
+[[Selanjutnya->Apakah akan menjadi swafoto terakhir?]]
+
+
+:: Apakah akan menjadi swafoto terakhir?
+Langit mulai beranjak ke warna jingga keemasan, seperti lukisan senja yang perlahan menutup hari ini. Siluet pepohonan di kejauhan tampak berbaur dengan lembutnya cahaya matahari yang hampir tenggelam. Kami berempat sibuk mengemasi barang bawaan, memastikan tidak ada yang tertinggal. Setiap botol kosong, sisa perbekalan, dan peralatan renang kami tata rapi kembali ke dalam bagasi mobil.
+
+Sebelum beranjak pulang, kami berdiri di depan pintu gerbang air terjun sekali lagi. Udara sore yang sejuk berhembus pelan, serta suara samar-samar dari gemericik air terjun yang menenangkan. Kami meregangkan tubuh, mencoba mengusir lelah setelah seharian penuh beraktivitas.
+
+“Ayo, foto terakhir dulu di sini!” seru salah satu temanku sambil mengeluarkan ponsel.
+
+Kami berkumpul, berpose dengan berbagai gaya konyol, tertawa lepas tanpa beban. Satu jepretan… dua… lalu beberapa lagi. Momen ini terasa sederhana, tapi entah kenapa begitu berharga.
+
+[[Selanjutnya->Mengapa perasaanku campur aduk?]]
+
+
+:: Mengapa perasaanku campur aduk?
+Saat layar ponsel menampilkan hasil swafoto kami, aku terdiam sejenak. Ada sesuatu yang terasa aneh di hatiku—perasaan yang sulit dijelaskan. Sebuah campuran kebahagiaan, rasa puas, tapi juga kesedihan yang samar.
+
+“Kenapa ya, rasanya kok kayak ada yang kurang?” pikirku.
+
+Aku menatap wajah teman-temanku di foto. Apakah mereka merasakan hal yang sama? Apakah kebahagiaan hari ini juga terasa singkat bagi mereka?
+
+Perjalanan ini mengingatkanku akan kenyataan yang mulai merayap di benakku. Sebentar lagi, kami akan kembali ke kehidupan yang penuh tanggung jawab dan rutinitas. Dunia kerja, kewajiban, dan hal-hal yang perlahan menghapus kebebasan kecil seperti ini.
+
+“Apa nanti kita masih bisa begini lagi? Bisa nggak ya, ngulangin momen kayak gini?”
+
+[[Selanjutnya->Belum siap menjadi orang dewasa]]
+
+
+:: Belum siap menjadi orang dewasa
+Langit senja terus bergulir, seiring mobil kami yang mulai melaju meninggalkan tempat ini. Di dalam mobil, aku memandang ke luar jendela, menyaksikan pemandangan yang perlahan berganti menjadi lampu-lampu kota.
+
+Di balik senyum yang tertinggal dari perjalanan ini, ada bisikan kecil yang mengingatkan—aku belum siap menjadi orang dewasa sepenuhnya. Jika menjadi dewasa berarti hidup dalam rutinitas tanpa jeda, aku berharap setidaknya hari-hari seperti ini bisa menjadi titik terang yang selalu bisa kami ulangi.
+
+Mungkin tidak hari ini, tapi suatu saat nanti.
+
+[[Selanjutnya->Perbincangan kecil di dalam mobil]]
+
+
+:: Perbincangan kecil di dalam mobil
+<<if $player.credits.health > 0>><<include Player>>“Kamu kelihatan segar banget ya, tadi sempet tidur di mobil kan?” tanya salah satu temanku sambil tersenyum iseng.
+
+Aku tertawa kecil. “Lumayan, peregangan tadi bikin aku nggak gampang capek.”
+
+“Enak bener, bro. Gue masih kerasa pegel gara-gara angkat barang sendirian.”
+
+Aku menggaruk kepala, sedikit canggung. “Lagian, lo yang buru-buru tadi. Kalau cape di awal, bisa-bisa tumbang duluan.”
+
+Meski aku merasa bersalah, setidaknya tubuhku terasa lebih bugar sekarang.
+<<else>>“Gila, punggung gue pegel banget, kayaknya kecapekan.”
+
+Aku mengelus leherku yang terasa tegang. Salah satu temanku tertawa kecil. “Ya iyalah, lo yang paling gercep tadi.”
+
+Aku mengangguk, meski rasanya pegal ini mulai mengganggu. “Gapapa sih, yang penting cepet kelar tadi.”
+
+Mereka tertawa kecil, dan aku merasa puas karena bisa banyak membantu sejak awal.
+<</if>>
+[[Selanjutnya->Sampai di rumahku]]
+
+
+:: Sampai di rumahku
+Mobil berhenti di depan rumahku. Senja hampir habis, dan langit mulai dipenuhi bintang. Kami keluar satu per satu, mengambil barang-barang di bagasi.
+
+<<if $player.credits.health > 0>><<include Player>>Aku menghela napas panjang, merasa segar meski tubuh sedikit lelah. “Bro, nanti mampir makan dulu nggak? Gue masih kuat jalan,” ucapku pada diri sendiri, tapi sepertinya aku sudah mulai merasa lapar.
+
+Tapi lalu aku berpikir, "Ah, mending pulang aja deh. Besok ada upacara sarjana, masih banyak yang perlu dipersiapkan." Aku menatap teman-temanku yang sudah mulai membawa barang.
+
+[[“Ayo, gue juga masih seger nih!”]]
+@@color: green; + Health @@ @@color: red; - Financial Management @@
+
+[[“Kayaknya mending pulang aja, besok waktunya persiapan upacara sarjana.”]]
+@@color: green; + Time Management @@ @@color: red; - Patience @@
+
+<<else>>Aku merasa punggungku kaku, rasanya seperti baru saja dilatih habis-habisan. "Makan dulu kali ya? Gue butuh duduk bentar, punggung udah kaya papan," kataku dalam hati, mencoba mencari alasan untuk sedikit istirahat.
+
+Tapi kemudian, aku berpikir lagi, "Ah, badan udah capek banget. Mending langsung pulang aja, istirahat, dan siap-siap buat besok." Pikiranku berputar tentang apa yang harus dilakukan setelah sampai rumah.
+
+[[“Guys, ayo kita cari makan, udah lapar nih!”]]
+@@color: green; + Health @@ @@color: red; - Financial Management @@
+
+[[“Nggak deh, badan udah capek banget. Mending langsung pulang.”]]
+@@color: green; + Financial Management @@ @@color: green; + Health @@ @@color: red; - Patience  @@
+<</if>>
+
+
+:: “Ayo, gue juga masih seger nih!”
+<<set $player.credits.health += 1>><<set $player.credits.financial_management -= 1>>
+
+
+:: “Kayaknya mending pulang aja, besok waktunya persiapan upacara sarjana.”
+
+
+:: “Guys, ayo kita cari makan, udah lapar nih!”
+<<set $player.credits.health += 1>><<set $player.credits.financial_management -= 1>>"Eh, guys, gimana kalau kita makan dulu? Perut gue udah keroncongan banget nih!" seruku sambil mengangkat tas dari mobil.
+
+Teman-temanku saling melirik, lalu salah satu dari mereka tertawa kecil. "Eh, bukannya tadi lu yang bilang punggung lu kayak papan? Kok sekarang malah semangat makan gitu?"
+
+Aku terkekeh, mencoba menjelaskan sambil menggaruk kepala. "Iya sih, punggung gue emang pegel, tapi kalau udah ngomongin makan, rasanya segala lelah hilang aja. Apalagi ini udah jamnya makan."
+
+Salah satu temanku yang lain ikut tersenyum. “Yaudah deh, ikut aja. Tapi kalau nanti lu mulai ngeluh capek lagi, mending lu langsung pesen ojol, deh. Jangan sampai kayak di mobil tadi!” Dia menambahkan sambil tertawa kecil, seolah bercanda, tapi aku nggak yakin sama omongannya.
+
+Aku membalas sambil tertawa. "Gak bakal, bro. Gue beneran semangat makan!"
+
+“Yaudah, kalau gitu kita jalan bareng, yuk!” sahut temanku yang lain, ikut setuju. Kami semua pun bergegas menuju tempat makan terdekat, melupakan kelelahan dari perjalanan panjang tadi.
+
+[[Selanjutnya->Mencari sesuap nasi agar rasa lelah meluruh]]
+
+
+:: Mencari sesuap nasi agar rasa lelah meluruh
+"Hmm, gue cek di internet, ada tempat makan murah deket sini, jaraknya sekitar 500 meter. Gimana kalau kita jalan kaki aja?" ujar salah satu temanku sambil menunjuk ke arah gang kecil di depan.  
+
+Aku melirik ponselku sekilas dan tertawa. "Syukur deh deket rumah gue. Serius, punggung gue udah nggak karuan. Gue butuh makanan yang bener-bener bisa ngebalikin tenaga!" kataku, mencoba memacu semangat sambil mengikuti langkah teman-temanku.  
+
+Salah satu dari mereka terkekeh sambil mengangkat bahu. "Namanya juga konsekuensi, bro. Kalau semuanya dibikin nyaman, punggung lu bakal kehilangan arti perjuangan," candanya, menyentil bahuku pelan.  
+
+Aku tertawa kecil. "Iya, iya. Yang penting jangan sampe punggung ini jadi legenda penderitaan, lah."  
+
+"Lu emang juara kalau urusan makan. Gue juga udah lapar, ayo kita cepetin langkahnya," sahut temanku yang lain, mempercepat jalannya sambil menyusul di sampingku.
+
+[[Selanjutnya->Makan malam yang penuh tawa dan cerita]]
+
+
+:: Makan malam yang penuh tawa dan cerita
+"Dah sampe juga, guys. Tempatnya kayaknya enak deh, liat dari luar aja udah rame," ujar salah satu temanku sambil menunjuk ke arah sebuah warung makan kecil di pinggir jalan.
+
+Aku mengangguk setuju. "Iya, bau masakannya aja udah bikin perut gue keroncongan. Ayo, kita masuk!" seruku sambil membuka pintu warung.
+
+Saat kami masuk, aroma rempah dan santan langsung menyambut kami. Suasana warung yang sederhana tapi hangat membuat kami merasa nyaman. Mulailah aku memesan makanan karena jiwaku sudah seperti kakek-kakek jompo yang belum makan satu minggu.
+
+
+:: “Nggak deh, badan udah capek banget. Mending langsung pulang.”
+<<set $player.credits.financial_management += 1>><<set $player.credits.health += 1>><<set $player.credits.patience -= 1>>
