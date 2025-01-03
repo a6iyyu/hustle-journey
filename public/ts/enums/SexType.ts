@@ -1,6 +1,4 @@
-namespace enums {
-  export enum SexType {
-    Masculine,
-    Feminime
-  }
+export enum SexType {
+  Masculine,
+  Feminime,
 }
