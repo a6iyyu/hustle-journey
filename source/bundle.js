@@ -161,6 +161,10 @@ var Game = (() => {
     "public/ts/Main.ts"() {
       init_Character();
       init_SexType();
+      var link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.href = "/public/styles/stylesheet.css";
+      document.head.appendChild(link);
       var playerCharacter = new Character("1", "Alan", "Kuproy", 0 /* Masculine */, 18, 2, 2);
       window.playerCharacter = playerCharacter;
     }
