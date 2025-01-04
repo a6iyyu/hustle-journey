@@ -6,3 +6,6 @@ build
 decompile
 tweego.exe
 source/bundle.js
+.storyformats\sugarcube-2.37.3
+.storyformats\engine.js
+.storyformats\jquery.js
