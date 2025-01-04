@@ -5,10 +5,10 @@ export class Skill {
   constructor(skill: number = 1) {
     this._skill = Math.max(this.min, Math.min(this.max, skill));
   }
-  get need(): number {
+  get value(): number {
     return this._skill;
   }
-  set need(value: number) {
+  set value(value: number) {
     this._skill = Math.max(this.min, Math.min(this.max, value));
   }
 }

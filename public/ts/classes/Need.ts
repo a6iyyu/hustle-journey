@@ -1,14 +1,14 @@
 export class Need {
-  private _need: number = 100;
+  private _value: number = 100;
   protected readonly _min: number = 0;
   protected readonly _max: number = 100;
   constructor(need: number = 100) {
-    this._need = Math.max(this._min, Math.min(this._max, need));
+    this._value = Math.max(this._min, Math.min(this._max, need));
   }
-  get need(): number {
-    return this._need;
+  get value(): number {
+    return this._value;
   }
-  set need(value: number) {
-    this._need = Math.max(this._min, Math.min(this._max, value));
+  set value(value: number) {
+    this._value = Math.max(this._min, Math.min(this._max, value));
   }
 }

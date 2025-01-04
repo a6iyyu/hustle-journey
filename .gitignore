@@ -4,3 +4,5 @@ package-lock.json
 export
 build
 decompile
+tweego.exe
+source/bundle.js

@@ -3,6 +3,7 @@ import { Skill } from "./Skill";
 import { SexType } from "../enums/SexType";
 import { Apparel } from "./Apparel";
 import { ApparelSlot } from "../enums/ApparelSlot";
+import { Magnitude } from "./Magnitude";
 
 export class Character {
   // main attributes
@@ -13,8 +14,8 @@ export class Character {
   // appearance magnitude
   sexType: SexType;
   intAge: number;
-  private _fat: number;
-  private _muscle: number;
+  fat: Magnitude;
+  muscle: Magnitude;
 
   // equipped apparels
   EquippedApparels: Map<ApparelSlot, Apparel[]>;
@@ -37,8 +38,8 @@ export class Character {
     surname: string = "",
     sexType: SexType = SexType.Masculine,
     intAge: number = 18,
-    fat: number = 0,
-    muscle: number = 0,
+    fat: Magnitude = new Magnitude(2),
+    muscle: Magnitude = new Magnitude(2),
     rest: Need = new Need(100),
     painlessness: Need = new Need(100),
     satiety: Need = new Need(100),
@@ -53,8 +54,8 @@ export class Character {
     this.surname = surname;
     this.sexType = sexType;
     this.intAge = intAge;
-    this._fat = Math.min(Math.max(fat, 0), 6);
-    this._muscle = Math.min(Math.max(muscle, 0), 6);
+    this.fat = fat;
+    this.muscle = muscle;
     this.EquippedApparels = new Map();
     this.rest = rest;
     this.painlessness = painlessness;
@@ -65,22 +66,6 @@ export class Character {
     this.hygiene = hygiene;
     this.charisma = charisma;
   }
-
-  get fat(): number {
-    return this._fat;
-  }
-
-  set fat(value: number) {
-    this._fat = Mathe.clamp(value, 0, 6);
-  }
-
-  get muscle(): number {
-    return this._muscle;
-  }
-  set muscle(value: number) {
-    this._muscle = Mathe.clamp(value, 0, 6);
-  }
-
   // prettier-ignore
   get physique(): string {
       const bodyTypes = [
@@ -92,7 +77,7 @@ export class Character {
         ["Pudgy", "Chubby", "Stout", "Robust", "Thick", "Powerhouse", "Brawny"],
         ["Overweight", "Portly", "Heavyset", "Large", "Hulking", "Gargantuan", "Herculean"],
       ];
-      return bodyTypes[Math.min(this.fat, 6)][Math.min(this.muscle, 6)];
+      return bodyTypes[Math.min(this.fat.value, 6)][Math.min(this.muscle.value, 6)];
     }
 
   get ageDescriptor(): string {
