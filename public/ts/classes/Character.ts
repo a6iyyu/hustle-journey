@@ -4,8 +4,9 @@ import { SexType } from "../enums/SexType";
 import { Apparel } from "./Apparel";
 import { ApparelSlot } from "../enums/ApparelSlot";
 import { Magnitude } from "./Magnitude";
+import { IClass } from "./IClass";
 
-export class Character {
+export class Character implements IClass {
   // main attributes
   id: string;
   forename: string | null;
@@ -13,7 +14,7 @@ export class Character {
 
   // appearance magnitude
   sexType: SexType;
-  intAge: number;
+  age: number;
   fat: Magnitude;
   muscle: Magnitude;
 
@@ -53,7 +54,7 @@ export class Character {
     this.forename = forename;
     this.surname = surname;
     this.sexType = sexType;
-    this.intAge = intAge;
+    this.age = intAge;
     this.fat = fat;
     this.muscle = muscle;
     this.EquippedApparels = new Map();
@@ -81,22 +82,22 @@ export class Character {
     }
 
   get ageDescriptor(): string {
-    if (this.intAge < 17) return "teenage";
-    if (this.intAge < 21) return "grown-up";
-    if (this.intAge < 24) return "early-twenties";
-    if (this.intAge < 27) return "mid-twenties";
-    if (this.intAge < 30) return "late-twenties";
-    if (this.intAge < 34) return "early-thirties";
-    if (this.intAge < 37) return "mid-thirties";
-    if (this.intAge < 40) return "late-thirties";
+    if (this.age < 17) return "teenage";
+    if (this.age < 21) return "grown-up";
+    if (this.age < 24) return "early-twenties";
+    if (this.age < 27) return "mid-twenties";
+    if (this.age < 30) return "late-twenties";
+    if (this.age < 34) return "early-thirties";
+    if (this.age < 37) return "mid-thirties";
+    if (this.age < 40) return "late-thirties";
     return "fuzzy-aged";
   }
 
   get sexToAgeDescriptor(): string {
     if (this.sexType === SexType.Masculine) {
-      return this.intAge <= 21 ? "Boy" : "Man";
+      return this.age <= 21 ? "Boy" : "Man";
     } else if (this.sexType === SexType.Feminime) {
-      return this.intAge <= 21 ? "Girl" : "Woman";
+      return this.age <= 21 ? "Girl" : "Woman";
     }
     return "Hermaphrodite";
   }
@@ -123,8 +124,24 @@ export class Character {
     return this.forename ? `${this.forename} ${this.surname}` : this.surname;
   }
 
-  writeIntoJSONFile(): void {
-    const jsonString = JSON.stringify(this);
-    console.log("Character JSON:", jsonString);
-  }
+  clone() {
+		// Return a new instance containing our own data.
+		return new Character(
+    this.id,
+    this.forename,
+    this.surname,
+    this.sexType,
+    this.age,
+    this.fat,
+    this.muscle,
+    this.rest,
+    this.painlessness,
+    this.satiety,
+    this.comfort,
+    this.entertainment,
+    this.social,
+    this.hygiene,
+    this.charisma
+		);
+	}
 }

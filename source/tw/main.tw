@@ -18,11 +18,6 @@
 [[Personality]]
 [[Stats]]
 
-
-:: Userstylesheet [stylesheet]
-
-
-
 :: Personality
 !! Personality
 <<include TableOfPersonality>>
@@ -45,4 +40,4 @@ Apa yang terjadi setelah kelulusan? Hidup tidak selalu semudah mendapatkan peker
 <<print playerCharacter.forename>>
 <<print playerCharacter.surname>>
 
-[[Next->Berlibur ke tempat wisata]]
+[[Create your character|CharacterCreation]]

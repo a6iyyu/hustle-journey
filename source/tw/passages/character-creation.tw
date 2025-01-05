@@ -1,0 +1,33 @@
+:: CharacterCreation
+Bet this is the most fun part of any games. Let us define your character.
+<<set 
+$char to new Character(
+    "",
+    "Belum",
+    "BelumBelum"
+)
+
+>>
+
+<<print $char.age>>
+
+''Forename''
+<<textbox "$char.forename" "Malorie">>
+
+''Lastname''
+<<textbox "$char.surname" "Jones">>
+
+<<button "Simpan">>
+    <<script>>
+        playerCharacter = variables().char.clone();
+    <</script>>
+    /* <<unset $forename>>
+    <<unset $surname>> */
+<</button>>
+
+<<button "lihat">>
+    <<script>>
+        console.log(playerCharacter.forename +" "+ playerCharacter.surname);
+        console.log(playerCharacter.age);
+    <</script>>
+<</button>>
