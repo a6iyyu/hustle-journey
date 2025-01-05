@@ -17,17 +17,24 @@ $char to new Character(
 ''Lastname''
 <<textbox "$char.surname" "Jones">>
 
-<<button "Simpan">>
+''Sex''
+<label><<radiobutton "$char.sexType" "0" autocheck>> Masculine</label>
+<label><<radiobutton "$char.sexType" "1" autocheck>> Feminime</label>
+
+''''
+
+
+<<link "Start" "Bedroom">>
     <<script>>
         playerCharacter = variables().char.clone();
     <</script>>
-    /* <<unset $forename>>
-    <<unset $surname>> */
-<</button>>
+    /* <<unset $char>> */
+<</link>>
 
 <<button "lihat">>
     <<script>>
         console.log(playerCharacter.forename +" "+ playerCharacter.surname);
         console.log(playerCharacter.age);
+        console.log(playerCharacter.sexType)
     <</script>>
 <</button>>

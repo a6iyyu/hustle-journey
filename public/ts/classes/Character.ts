@@ -121,7 +121,13 @@ export class Character implements IClass {
   }
 
   getCalling(): string {
-    return this.forename ? `${this.forename} ${this.surname}` : this.surname;
+    let calling: string;
+    if (this.forename) {
+      calling = this.forename;
+    } else {
+      calling = this.surname;
+    }
+    return calling;
   }
 
   clone() {
@@ -144,4 +150,28 @@ export class Character implements IClass {
     this.charisma
 		);
 	}
+
+  toJSON() { 
+    let code: string = "new Character("+
+    JSON.stringify(this.id)+","+
+    JSON.stringify(this.forename)+","+
+    JSON.stringify(this.surname)+","+
+    JSON.stringify(this.sexType)+","+
+    JSON.stringify(this.age)+","+
+    JSON.stringify(this.fat)+","+
+    JSON.stringify(this.muscle)+","+
+    JSON.stringify(this.rest)+","+
+    JSON.stringify(this.painlessness)+","+
+    JSON.stringify(this.satiety)+","+
+    JSON.stringify(this.comfort)+","+
+    JSON.stringify(this.entertainment)+","+
+    JSON.stringify(this.social)+","+
+    JSON.stringify(this.hygiene)+","+
+    JSON.stringify(this.charisma)+")";
+    return Serial.createReviver(
+      code
+    );
+  }
+  
+  
 }

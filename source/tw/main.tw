@@ -41,3 +41,18 @@ Apa yang terjadi setelah kelulusan? Hidup tidak selalu semudah mendapatkan peker
 <<print playerCharacter.surname>>
 
 [[Create your character|CharacterCreation]]
+
+:: AkuBikinWidget
+<<widget "he">>
+	<<if playerCharacter.sexType eq 0>>
+		he
+	<<elseif playerCharacter.sexType eq 1>>
+		she
+	<<else>>
+		arek jancok
+	<</if>>
+<</widget>>
+
+<<script>>
+	Macro.
+<</script>>
