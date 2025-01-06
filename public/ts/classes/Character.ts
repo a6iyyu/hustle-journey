@@ -5,6 +5,7 @@ import { Apparel } from "./Apparel";
 import { ApparelSlot } from "../enums/ApparelSlot";
 import { Magnitude } from "./Magnitude";
 import { IClass } from "./IClass";
+import { RandomGenerator } from "../tools/RandomGenerator";
 
 export class Character implements IClass {
   // main attributes
@@ -34,11 +35,11 @@ export class Character implements IClass {
   charisma: Skill;
 
   constructor(
-    id: string = "",
-    forename: string | null = null,
-    surname: string = "",
+    id: string = "default value",
+    forename: string | null = "Hans",
+    surname: string = "Laneway",
     sexType: SexType = SexType.Masculine,
-    intAge: number = 18,
+    age: number = 18,
     fat: Magnitude = new Magnitude(2),
     muscle: Magnitude = new Magnitude(2),
     rest: Need = new Need(100),
@@ -54,7 +55,7 @@ export class Character implements IClass {
     this.forename = forename;
     this.surname = surname;
     this.sexType = sexType;
-    this.age = intAge;
+    this.age = age;
     this.fat = fat;
     this.muscle = muscle;
     this.EquippedApparels = new Map();
@@ -93,6 +94,10 @@ export class Character implements IClass {
     return "fuzzy-aged";
   }
 
+  static randomizeProperties(): Character {
+    const newCharacter = RandomGenerator.generateCharacter();
+    return newCharacter;
+  }
   get sexToAgeDescriptor(): string {
     if (this.sexType === SexType.Masculine) {
       return this.age <= 21 ? "Boy" : "Man";
