@@ -3,9 +3,9 @@ import { Skill } from "./Skill";
 import { SexType } from "../enums/SexType";
 import { Apparel } from "./Apparel";
 import { ApparelSlot } from "../enums/ApparelSlot";
-import { Magnitude } from "./Magnitude";
 import { IClass } from "./IClass";
 import { RandomGenerator } from "../tools/RandomGenerator";
+import { Physique } from './Physique';
 
 export class Character implements IClass {
   // main attributes
@@ -16,8 +16,7 @@ export class Character implements IClass {
   // appearance magnitude
   sexType: SexType;
   age: number;
-  fat: Magnitude;
-  muscle: Magnitude;
+  physique: Physique;
 
   // equipped apparels
   EquippedApparels: Map<ApparelSlot, Apparel[]>;
@@ -40,8 +39,7 @@ export class Character implements IClass {
     surname: string = "Laneway",
     sexType: SexType = SexType.Masculine,
     age: number = 18,
-    fat: Magnitude = new Magnitude(2),
-    muscle: Magnitude = new Magnitude(2),
+    physique: Physique = new Physique(3, 3),
     rest: Need = new Need(100),
     painlessness: Need = new Need(100),
     satiety: Need = new Need(100),
@@ -56,8 +54,7 @@ export class Character implements IClass {
     this.surname = surname;
     this.sexType = sexType;
     this.age = age;
-    this.fat = fat;
-    this.muscle = muscle;
+    this.physique = physique;
     this.EquippedApparels = new Map();
     this.rest = rest;
     this.painlessness = painlessness;
@@ -68,19 +65,6 @@ export class Character implements IClass {
     this.hygiene = hygiene;
     this.charisma = charisma;
   }
-  // prettier-ignore
-  get physique(): string {
-      const bodyTypes = [
-        ["Emaciated", "Thin", "Lean", "Toned", "Defined", "Sculpted", "Ripped"],
-        ["Gaunt", "Slender", "Slim", "Fit", "Taut", "Cut", "Shredded"],
-        ["Underweight", "Svelte", "Lithe", "Athletic", "Muscular", "Built", "Solid"],
-        ["Average", "Wiry", "Balanced", "Stocky", "Husky", "Buff", "Hefty"],
-        ["Soft", "Slightly Firm", "Firm", "Bulky", "Strong", "Burly", "Massive"],
-        ["Pudgy", "Chubby", "Stout", "Robust", "Thick", "Powerhouse", "Brawny"],
-        ["Overweight", "Portly", "Heavyset", "Large", "Hulking", "Gargantuan", "Herculean"],
-      ];
-      return bodyTypes[Math.min(this.fat.value, 6)][Math.min(this.muscle.value, 6)];
-    }
 
   get ageDescriptor(): string {
     if (this.age < 17) return "teenage";
@@ -143,8 +127,7 @@ export class Character implements IClass {
     this.surname,
     this.sexType,
     this.age,
-    this.fat,
-    this.muscle,
+    this.physique,
     this.rest,
     this.painlessness,
     this.satiety,
@@ -163,8 +146,7 @@ export class Character implements IClass {
     JSON.stringify(this.surname)+","+
     JSON.stringify(this.sexType)+","+
     JSON.stringify(this.age)+","+
-    JSON.stringify(this.fat)+","+
-    JSON.stringify(this.muscle)+","+
+    JSON.stringify(this.physique)+","+
     JSON.stringify(this.rest)+","+
     JSON.stringify(this.painlessness)+","+
     JSON.stringify(this.satiety)+","+
