@@ -1,4 +1,4 @@
 export interface IClass {
-    clone():IClass;
-    toJSON():any;
+  clone(): IClass;
+  toJSON(): any;
 }

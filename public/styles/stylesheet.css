@@ -1,20 +1,20 @@
 #menu-item-restart {
-	display: none;
+  display: none;
 }
 
 table {
-    border-collapse: collapse;
+  border-collapse: collapse;
 }
 
 th,
 td {
-    border: 1px solid #dddddd;
+  border: 1px solid #dddddd;
 }
 
 th {
-    text-align: center;
+  text-align: center;
 }
 
 tr:nth-child(even) {
-    background-color: #2e2e2e;
+  background-color: #2e2e2e;
 }

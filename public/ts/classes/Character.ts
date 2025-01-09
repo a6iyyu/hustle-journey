@@ -5,23 +5,23 @@ import { Apparel } from "./Apparel";
 import { ApparelSlot } from "../enums/ApparelSlot";
 import { IClass } from "./IClass";
 import { RandomGenerator } from "../tools/RandomGenerator";
-import { Physique } from './Physique';
+import { Physique } from "./Physique";
 
 export class Character implements IClass {
-  // main attributes
+  // Main Attributes
   id: string;
   forename: string | null;
   surname: string;
 
-  // appearance magnitude
+  // Appearance Magnitude
   sexType: SexType;
   age: number;
   physique: Physique;
 
-  // equipped apparels
+  // Equipped Apparels
   EquippedApparels: Map<ApparelSlot, Apparel[]>;
 
-  // needs
+  // Needs
   rest: Need;
   painlessness: Need;
   satiety: Need;
@@ -30,7 +30,7 @@ export class Character implements IClass {
   social: Need;
   hygiene: Need;
 
-  // skills
+  // Skills
   charisma: Skill;
 
   constructor(
@@ -82,6 +82,7 @@ export class Character implements IClass {
     const newCharacter = RandomGenerator.generateCharacter();
     return newCharacter;
   }
+  
   get sexToAgeDescriptor(): string {
     if (this.sexType === SexType.Masculine) {
       return this.age <= 21 ? "Boy" : "Man";
@@ -97,6 +98,7 @@ export class Character implements IClass {
     }
     this.EquippedApparels.get(apparel.apparelSlot)!.push(apparel);
   }
+
   getApparelsByApparelSlot(apparelSlot: ApparelSlot): Apparel[] {
     return this.EquippedApparels.get(apparelSlot) || [];
   }
@@ -120,45 +122,56 @@ export class Character implements IClass {
   }
 
   clone() {
-		// Return a new instance containing our own data.
-		return new Character(
-    this.id,
-    this.forename,
-    this.surname,
-    this.sexType,
-    this.age,
-    this.physique,
-    this.rest,
-    this.painlessness,
-    this.satiety,
-    this.comfort,
-    this.entertainment,
-    this.social,
-    this.hygiene,
-    this.charisma
-		);
-	}
-
-  toJSON() { 
-    let code: string = "new Character("+
-    JSON.stringify(this.id)+","+
-    JSON.stringify(this.forename)+","+
-    JSON.stringify(this.surname)+","+
-    JSON.stringify(this.sexType)+","+
-    JSON.stringify(this.age)+","+
-    JSON.stringify(this.physique)+","+
-    JSON.stringify(this.rest)+","+
-    JSON.stringify(this.painlessness)+","+
-    JSON.stringify(this.satiety)+","+
-    JSON.stringify(this.comfort)+","+
-    JSON.stringify(this.entertainment)+","+
-    JSON.stringify(this.social)+","+
-    JSON.stringify(this.hygiene)+","+
-    JSON.stringify(this.charisma)+")";
-    return Serial.createReviver(
-      code
+    // Return a new instance containing our own data.
+    return new Character(
+      this.id,
+      this.forename,
+      this.surname,
+      this.sexType,
+      this.age,
+      this.physique,
+      this.rest,
+      this.painlessness,
+      this.satiety,
+      this.comfort,
+      this.entertainment,
+      this.social,
+      this.hygiene,
+      this.charisma
     );
   }
-  
-  
+
+  toJSON() {
+    let code: string =
+      "new Character(" +
+      JSON.stringify(this.id) +
+      "," +
+      JSON.stringify(this.forename) +
+      "," +
+      JSON.stringify(this.surname) +
+      "," +
+      JSON.stringify(this.sexType) +
+      "," +
+      JSON.stringify(this.age) +
+      "," +
+      JSON.stringify(this.physique) +
+      "," +
+      JSON.stringify(this.rest) +
+      "," +
+      JSON.stringify(this.painlessness) +
+      "," +
+      JSON.stringify(this.satiety) +
+      "," +
+      JSON.stringify(this.comfort) +
+      "," +
+      JSON.stringify(this.entertainment) +
+      "," +
+      JSON.stringify(this.social) +
+      "," +
+      JSON.stringify(this.hygiene) +
+      "," +
+      JSON.stringify(this.charisma) +
+      ")";
+    // return Serial.createReviver(code);
+  }
 }

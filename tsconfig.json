@@ -4,8 +4,8 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "module": "CommonJS",
-    "outDir": "./source/dist",              // Direktori output
-    // "rootDir": "./src",              // Direktori sumber kode
+    "outDir": "./src/dist",               // Output directory.
+    // "rootDir": "./src",                // Source code directory.
     "skipLibCheck": true,
     "strict": true,
     "target": "ES5",

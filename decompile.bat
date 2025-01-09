@@ -1,1 +1,1 @@
-call tweego -d decompile -o source/decompiled.tw
+call tweego -d decompile -o src/decompiled.tw

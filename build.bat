@@ -1,1 +1,1 @@
-call tweego -l -o export/index.html source
+call tweego -l -o index.html src
