@@ -40,7 +40,7 @@ public class Testing1 : MonoBehaviour
             new NarrativeSectionData
             {
                 Text = "Gang Mejayan > Rumahku\nIni adalah kamar kecil yang nyaman...",
-                Actions = new List<ActionChoice>()
+                // Actions = new List<ActionChoice>()
             },
             new NarrativeSectionData
             {
@@ -69,7 +69,6 @@ public class Testing1 : MonoBehaviour
                 }
             }
         };
-        // FindObjectOfType<NarrativeRenderer>().Render(sections);
         FindFirstObjectByType<NarrativeRenderer>().Render(sections);
     }
     /// <summary>

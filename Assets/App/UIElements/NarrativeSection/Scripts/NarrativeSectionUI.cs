@@ -21,6 +21,7 @@ public class NarrativeSectionUI : MonoBehaviour
             Destroy(child.gameObject);
         }
 
+        if(actions == null) return;
         // Add buttons
         foreach (var action in actions)
         {
