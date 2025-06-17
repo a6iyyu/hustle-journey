@@ -7,9 +7,12 @@ using System.Text;
 using Assets.App.Scripts.Singletons;
 using App.UIElements.NarrativeSection.DTOs;
 using System.Collections.Generic;
+using UnityEngine.UI;
+using System.Collections;
 
 public class Testing1 : MonoBehaviour
 {
+    public RectTransform canvas;
     void Start()
     {
         // Test();
@@ -70,6 +73,14 @@ public class Testing1 : MonoBehaviour
             }
         };
         FindFirstObjectByType<NarrativeRenderer>().Render(sections);
+        StartCoroutine(RebuildLayout());
+
+    }
+    IEnumerator RebuildLayout()
+    {
+        // yield return new WaitForEndOfFrame();
+        yield return new WaitForSeconds(1f);
+        LayoutRebuilder.ForceRebuildLayoutImmediate(canvas);
     }
     /// <summary>
     /// Dumps the given object's properties and values to a string.
