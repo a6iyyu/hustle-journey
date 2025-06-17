@@ -25,7 +25,7 @@ public class NarrativeSectionUI : MonoBehaviour
         foreach (var action in actions)
         {
             var go = Instantiate(actionButtonPrefab, actionContainer);
-            go.GetComponentInChildren<TextMeshProUGUI>().text = action.Label;
+            go.GetComponent<TextMeshProUGUI>().text = action.Label;
             go.GetComponent<Button>().onClick.AddListener(() => action.OnClick.Invoke());
         }
     }
