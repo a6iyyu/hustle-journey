@@ -1,1 +1,0 @@
-call tweego -d decompile -o src/decompiled.tw

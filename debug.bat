@@ -1,1 +1,0 @@
-call tweego -t -l -o Debug.index.html src

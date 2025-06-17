@@ -1,8 +1,0 @@
-:: Bedroom
-"Hey, <<print $char.getCalling()>>."
-
-You turn your head to the direction of the sound. It's your friend calling you. He comes to you, following your walking pace.
-
-"So..." he seems hesitant  . "What's next—after the graduation?"
-
-You actually never been thinking about that until your friend mentions it.

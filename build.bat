@@ -1,1 +1,0 @@
-call tweego -l -o index.html src
