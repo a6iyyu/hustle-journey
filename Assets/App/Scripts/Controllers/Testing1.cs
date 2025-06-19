@@ -9,6 +9,7 @@ using App.UIElements.NarrativeSection.DTOs;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using System.Collections;
+using Assets.App.Entities;
 
 public class Testing1 : MonoBehaviour
 {
@@ -38,48 +39,52 @@ public class Testing1 : MonoBehaviour
     }
     public void Test2()
     {
-        var sections = new List<NarrativeSectionData>
+        var narrativeRenderer = FindFirstObjectByType<NarrativeRenderer>();
+        CharacterModel jonas = new CharacterModel
+        {
+            Name = "Jonas",
+            Age = 20,
+            Sex = SexType.Male,
+            Physique = new PhysiqueModel { HeightPoint = 77, FatPoint = 1, MusclePoint = 1 }
+        };
+        jonas.Save();
+        jonas.Physique.Save();
+
+        var sections = new List<NarrativeSectionData>()
         {
             new NarrativeSectionData
+            { Text = "Character",
+                Actions = new List<ActionChoice>()
             {
-                Text = "Gang Mejayan > Rumahku\nIni adalah kamar kecil yang nyaman...",
-                // Actions = new List<ActionChoice>()
-            },
-            new NarrativeSectionData
-            {
-                Text = "Rena sedang duduk di kasur, menyisir rambutnya.",
-                Actions = new List<ActionChoice>
-                {
-                    new ActionChoice { Label = "Ajak bicara Rena", OnClick = () => Debug.Log("Ngobrol dengan Rena...") },
-                    new ActionChoice { Label = "Tanyakan kabar", OnClick = () => Debug.Log("Kamu bertanya kabar...") }
-                }
-            },
-            new NarrativeSectionData
-            {
-                Text = "Kulkas berdengung pelan. Sedikit berdebu.",
-                Actions = new List<ActionChoice>
-                {
-                    new ActionChoice { Label = "Ambil kue", OnClick = () => Debug.Log("Kamu ambil kue.") },
-                    new ActionChoice { Label = "Bersihkan kulkas", OnClick = () => Debug.Log("Membersihkan...") }
-                }
-            },
-            new NarrativeSectionData
-            {
-                Text = "Pintu kamar terbuka menuju ruang tengah.",
-                Actions = new List<ActionChoice>
-                {
-                    new ActionChoice { Label = "Keluar kamar", OnClick = () => Debug.Log("Keluar ke ruang tengah.") }
-                }
+                new ActionChoice
+                { Label = "Show Character",
+                    OnClick = () =>
+                    {
+                        narrativeRenderer.Append(new NarrativeSectionData
+                        {
+                            Text = VarDump(jonas)+"\n"+VarDump(jonas.Physique)+jonas.Physique.Height(),
+                        });
+                        StartCoroutine(RebuildLayout());
+                    }
+                },
+                new ActionChoice{
+                    Label = "Makan popcorn-nya.",
+                    OnClick = () =>
+                    {
+                        Debug.Log(jonas.Name + " makan popcorn-nya.");
+                    }
+                },
+            }
             }
         };
-        FindFirstObjectByType<NarrativeRenderer>().Render(sections);
+        narrativeRenderer.Render(sections);
         StartCoroutine(RebuildLayout());
 
     }
     IEnumerator RebuildLayout()
     {
         // yield return new WaitForEndOfFrame();
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
         LayoutRebuilder.ForceRebuildLayoutImmediate(canvas);
     }
     /// <summary>

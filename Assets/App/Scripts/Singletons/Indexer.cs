@@ -5,7 +5,7 @@ namespace Assets.App.Scripts.Singletons
 	using System;
     using Assets.App.Entities;
 
-	public class Indexer : MonoBehaviour
+    public class Indexer : MonoBehaviour
 	{
 		private static Indexer _instance;
 
@@ -38,8 +38,11 @@ namespace Assets.App.Scripts.Singletons
 
 			Characters = new Dictionary<Guid, Character>();
 			Pets = new Dictionary<Guid, Pet>();
+			Physiques = new Dictionary<Guid, Physique>();
+
 		}
 		public Dictionary<Guid, Character> Characters { get; private set; }
 		public Dictionary<Guid, Pet> Pets { get; private set; }
+		public Dictionary<Guid, Physique> Physiques { get; private set; }
 	}
 }

@@ -12,17 +12,17 @@ namespace Assets.App.Models
         public string Breed { get; set; }
         public SexType Sex { get; set; }
         public CharacterModel Owner { get; set; }
-        public static PetModel Make(string name, int age, string breed, SexType sex, CharacterModel owner)
-        {
-            var pet = new PetModel();
-            pet.Id = Guid.NewGuid();
-            pet.Name = name;
-            pet.Age = age;
-            pet.Breed = breed;
-            pet.Sex = sex;
-            pet.Owner = owner;
-            return pet;
-        }
+        // public static PetModel Make(string name, int age, string breed, SexType sex, CharacterModel owner)
+        // {
+        //     var pet = new PetModel();
+        //     pet.Id = Guid.NewGuid();
+        //     pet.Name = name;
+        //     pet.Age = age;
+        //     pet.Breed = breed;
+        //     pet.Sex = sex;
+        //     pet.Owner = owner;
+        //     return pet;
+        // }
         /// <summary>
         /// Find a pet entity by id and map it intp a pet model
         /// </summary>
