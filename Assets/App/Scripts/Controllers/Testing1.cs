@@ -20,23 +20,6 @@ public class Testing1 : MonoBehaviour
         Test2();
     }
 
-    public void Test()
-    {
-        Debug.Log("Test");
-        var character = new CharacterModel { Name = "Alan", Age = 20, Sex = SexType.Male };
-        Debug.Log(VarDump(character));
-        character.Save();
-        var characterFromDict = CharacterModel.Find(character.Id);
-        Debug.Log(VarDump(character));
-        Debug.Log(VarDump(characterFromDict));
-        var myPet = new PetModel { Name = "Luna", Age = 5, Breed = "Husky", Sex = SexType.Female, Owner = character };
-        Debug.Log(VarDump(myPet));
-        myPet.Save();
-        var petFromDict = PetModel.Find(myPet.Id);
-        Debug.Log(VarDump(myPet));
-        Debug.Log(VarDump(petFromDict));
-
-    }
     public void Test2()
     {
         var narrativeRenderer = FindFirstObjectByType<NarrativeRenderer>();
@@ -44,36 +27,53 @@ public class Testing1 : MonoBehaviour
         {
             Name = "Jonas",
             Age = 20,
-            Sex = SexType.Male,
-            Physique = new PhysiqueModel { HeightPoint = 77, FatPoint = 1, MusclePoint = 1 }
+            Physique = new PhysiqueModel {Sex = SexType.Male, HeightPoint = 100, FatPoint = 50, MusclePoint = 0 }
         };
-        jonas.Save();
-        jonas.Physique.Save();
+
+        CharacterModel jannet = new CharacterModel
+        {
+            Name = "Jannet",
+            Age = 20,
+            Physique = new PhysiqueModel { Sex = SexType.Female, HeightPoint = 0, FatPoint = 100, MusclePoint = 0 }
+        };
+        CharacterModel michael = new CharacterModel
+        {
+            Name = "Michael",
+            Age = 20,
+            Physique = new PhysiqueModel { Sex = SexType.Male, HeightPoint = 70, FatPoint = 50, MusclePoint = 0 }
+        };
+        CharacterModel micah = new CharacterModel
+        {
+            Name = "Micah",
+            Age = 20,
+            Physique = new PhysiqueModel { Sex = SexType.Male, HeightPoint = 80, FatPoint = 35, MusclePoint = 20 }
+        };
+        CharacterModel hoss = new CharacterModel
+        {
+            Name = "Hoss",
+            Age = 20,
+            Physique = new PhysiqueModel { Sex = SexType.Male, HeightPoint = 50, FatPoint = 50, MusclePoint = 0 }
+        };
+
+        Debug.Log(jonas.Name+"\n"+jonas.Physique.Height+"\n"+jonas.Physique.Weight);
+        Debug.Log(jannet.Name + "\n" + jannet.Physique.Height + "\n" + jannet.Physique.Weight);
+        Debug.Log(michael.Name + "\n" + michael.Physique.Height + "\n" + michael.Physique.Weight);
+        Debug.Log(micah.Name + "\n" + micah.Physique.Height + "\n" + micah.Physique.Weight);
+        Debug.Log(hoss.Name + "\n" + hoss.Physique.Height + "\n" + hoss.Physique.Weight);
 
         var sections = new List<NarrativeSectionData>()
         {
             new NarrativeSectionData
-            { Text = "Character",
+            { Text = "Jonas",
                 Actions = new List<ActionChoice>()
             {
-                new ActionChoice
-                { Label = "Show Character",
-                    OnClick = () =>
-                    {
-                        narrativeRenderer.Append(new NarrativeSectionData
-                        {
-                            Text = VarDump(jonas)+"\n"+VarDump(jonas.Physique)+jonas.Physique.Height(),
-                        });
-                        StartCoroutine(RebuildLayout());
-                    }
-                },
                 new ActionChoice{
-                    Label = "Makan popcorn-nya.",
-                    OnClick = () =>
-                    {
-                        Debug.Log(jonas.Name + " makan popcorn-nya.");
+                    Label = "-1 Fat",
+                    OnClick = () => {
+                        jonas.Physique.FatPoint -= 1;
+                        Debug.Log(jonas.Physique.FatPoint+"; "+jonas.Physique.Weight);
                     }
-                },
+                }
             }
             }
         };

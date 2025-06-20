@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Assets.App.Enums;
 using Assets.App.Interfaces;
 namespace Assets.App.Entities
 {
@@ -7,12 +8,14 @@ namespace Assets.App.Entities
     public class Physique : IEntity
     {
         public Guid Id { get; set; }
-        public Physique(float heightPoint, float fatPoint, float musclePoint)
+        public SexType Sex { get; set; }
+        public Physique(SexType sex, float heightPoint, float fatPoint, float musclePoint)
         {
             Id = Guid.NewGuid();
             HeightPoint = heightPoint;
             FatPoint = fatPoint;
             MusclePoint = musclePoint;
+            Sex = sex;
         }
         /// <summary>
         /// The height of the character in scale of 1 to 100.

@@ -9,12 +9,11 @@ namespace Assets.App.Models
     {
         public string Name { get; set; }
         public int Age { get; set; }
-        public SexType Sex { get; set; }
         public PhysiqueModel Physique { get; set; }
 
         protected override Character ToEntity()
         {
-            return new Character(Name, Age, Sex, Physique.Id)
+            return new Character(Name, Age, Physique.Id)
             {
                 Id = Id == Guid.Empty ? Guid.NewGuid() : Id
             };
@@ -24,7 +23,6 @@ namespace Assets.App.Models
         {
             Name = entity.Name;
             Age = entity.Age;
-            Sex = entity.Sex;
             Physique = PhysiqueModel.Find(entity.PhysiqueId);
         }
 

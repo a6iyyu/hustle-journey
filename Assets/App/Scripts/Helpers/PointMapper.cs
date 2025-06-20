@@ -13,5 +13,6 @@ namespace Assets.App.Scripts.Helpers
             var point = (realValue - min) / (max - min) * 100f;
             return point;
         }
+        
     }
 }
