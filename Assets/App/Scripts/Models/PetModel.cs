@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
-using Assets.App.Enums;
-using Assets.App.Entities;
+using Assets.App.Scripts.Entities;
+using Assets.App.Scripts.Enums;
 using Assets.App.Scripts.Singletons;
-namespace Assets.App.Models
+namespace Assets.App.Scripts.Models
 {
     public class PetModel : Model<Pet>
     {

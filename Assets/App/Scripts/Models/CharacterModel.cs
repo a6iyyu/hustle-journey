@@ -1,9 +1,8 @@
 using System;
-using Assets.App.Enums;
-using Assets.App.Entities;
 using Assets.App.Scripts.Singletons;
 using System.Collections.Generic;
-namespace Assets.App.Models
+using Assets.App.Scripts.Entities;
+namespace Assets.App.Scripts.Models
 {
     public class CharacterModel : Model<Character>
     {

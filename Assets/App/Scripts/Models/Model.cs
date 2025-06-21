@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
-using Assets.App.Interfaces;
-namespace Assets.App.Models
+using Assets.App.Scripts.Interfaces;
+namespace Assets.App.Scripts.Models
 {
     public abstract class Model<TEntity> where TEntity : IEntity
     {

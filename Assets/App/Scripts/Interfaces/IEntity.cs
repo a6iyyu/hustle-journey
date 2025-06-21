@@ -1,6 +1,6 @@
 using System;
 
-namespace Assets.App.Interfaces
+namespace Assets.App.Scripts.Interfaces
 {
     public interface IEntity
     {

@@ -1,6 +1,4 @@
 using System;
-using Assets.App.Models;
-using Assets.App.Enums;
 using UnityEngine;
 using System.Reflection;
 using System.Text;
@@ -9,7 +7,10 @@ using App.UIElements.NarrativeSection.DTOs;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using System.Collections;
-using Assets.App.Entities;
+using NUnit.Framework.Internal;
+using Assets.App.Scripts.Player;
+using Assets.App.Scripts.Enums;
+using Assets.App.Scripts.Models;
 
 public class Testing1 : MonoBehaviour
 {
@@ -17,70 +18,94 @@ public class Testing1 : MonoBehaviour
     void Start()
     {
         // Test();
-        Test2();
+        // Test2();
+        Test3();
     }
 
-    public void Test2()
+    void Test3()
     {
         var narrativeRenderer = FindFirstObjectByType<NarrativeRenderer>();
-        CharacterModel jonas = new CharacterModel
-        {
-            Name = "Jonas",
-            Age = 20,
-            Physique = new PhysiqueModel {Sex = SexType.Male, HeightPoint = 100, FatPoint = 50, MusclePoint = 0 }
-        };
 
-        CharacterModel jannet = new CharacterModel
+        Player player = new()
         {
-            Name = "Jannet",
-            Age = 20,
-            Physique = new PhysiqueModel { Sex = SexType.Female, HeightPoint = 0, FatPoint = 100, MusclePoint = 0 }
+            Name = "Test Player",
+            Age = 30,
+            Physique = new PhysiqueModel { Sex = SexType.Male, HeightPoint = 100, FatPoint = 50, MusclePoint = 0 },
         };
-        CharacterModel michael = new CharacterModel
-        {
-            Name = "Michael",
-            Age = 20,
-            Physique = new PhysiqueModel { Sex = SexType.Male, HeightPoint = 70, FatPoint = 50, MusclePoint = 0 }
-        };
-        CharacterModel micah = new CharacterModel
-        {
-            Name = "Micah",
-            Age = 20,
-            Physique = new PhysiqueModel { Sex = SexType.Male, HeightPoint = 80, FatPoint = 35, MusclePoint = 20 }
-        };
-        CharacterModel hoss = new CharacterModel
-        {
-            Name = "Hoss",
-            Age = 20,
-            Physique = new PhysiqueModel { Sex = SexType.Male, HeightPoint = 50, FatPoint = 50, MusclePoint = 0 }
-        };
-
-        Debug.Log(jonas.Name+"\n"+jonas.Physique.Height+"\n"+jonas.Physique.Weight);
-        Debug.Log(jannet.Name + "\n" + jannet.Physique.Height + "\n" + jannet.Physique.Weight);
-        Debug.Log(michael.Name + "\n" + michael.Physique.Height + "\n" + michael.Physique.Weight);
-        Debug.Log(micah.Name + "\n" + micah.Physique.Height + "\n" + micah.Physique.Weight);
-        Debug.Log(hoss.Name + "\n" + hoss.Physique.Height + "\n" + hoss.Physique.Weight);
+        player.Needs.Satiety = 50;
+        Debug.Log(player.Needs.Satiety);
 
         var sections = new List<NarrativeSectionData>()
         {
             new NarrativeSectionData
-            { Text = "Jonas",
-                Actions = new List<ActionChoice>()
             {
-                new ActionChoice{
-                    Label = "-1 Fat",
-                    OnClick = () => {
-                        jonas.Physique.FatPoint -= 1;
-                        Debug.Log(jonas.Physique.FatPoint+"; "+jonas.Physique.Weight);
-                    }
-                }
-            }
+                Text = "Test Player Needs"
             }
         };
-        narrativeRenderer.Render(sections);
-        StartCoroutine(RebuildLayout());
-
     }
+    // public void Test2()
+    // {
+    //     var narrativeRenderer = FindFirstObjectByType<NarrativeRenderer>();
+    //     CharacterModel jonas = new CharacterModel
+    //     {
+    //         Name = "Jonas",
+    //         Age = 20,
+    //         Physique = new PhysiqueModel {Sex = SexType.Male, HeightPoint = 100, FatPoint = 50, MusclePoint = 0 }
+    //     };
+
+    //     CharacterModel jannet = new CharacterModel
+    //     {
+    //         Name = "Jannet",
+    //         Age = 20,
+    //         Physique = new PhysiqueModel { Sex = SexType.Female, HeightPoint = 0, FatPoint = 100, MusclePoint = 0 }
+    //     };
+    //     CharacterModel michael = new CharacterModel
+    //     {
+    //         Name = "Michael",
+    //         Age = 20,
+    //         Physique = new PhysiqueModel { Sex = SexType.Male, HeightPoint = 70, FatPoint = 50, MusclePoint = 0 }
+    //     };
+    //     CharacterModel micah = new CharacterModel
+    //     {
+    //         Name = "Micah",
+    //         Age = 20,
+    //         Physique = new PhysiqueModel { Sex = SexType.Male, HeightPoint = 80, FatPoint = 35, MusclePoint = 20 }
+    //     };
+    //     CharacterModel hoss = new CharacterModel
+    //     {
+    //         Name = "Hoss",
+    //         Age = 20,
+    //         Physique = new PhysiqueModel { Sex = SexType.Male, HeightPoint = 50, FatPoint = 50, MusclePoint = 0 }
+    //     };
+
+    //     Debug.Log(jonas.Name+"\n"+jonas.Physique.Height+"\n"+jonas.Physique.Weight);
+    //     Debug.Log(jannet.Name + "\n" + jannet.Physique.Height + "\n" + jannet.Physique.Weight);
+    //     Debug.Log(michael.Name + "\n" + michael.Physique.Height + "\n" + michael.Physique.Weight);
+    //     Debug.Log(micah.Name + "\n" + micah.Physique.Height + "\n" + micah.Physique.Weight);
+    //     Debug.Log(hoss.Name + "\n" + hoss.Physique.Height + "\n" + hoss.Physique.Weight);
+
+    //     var sections = new List<NarrativeSectionData>()
+    //     {
+    //         new NarrativeSectionData
+    //         { Text = "Jonas",
+    //             Actions = new List<ActionChoice>()
+    //         {
+    //             new ActionChoice{
+    //                 Label = "-1 Fat",
+    //                 OnClick = () => {
+    //                     jonas.Physique.FatPoint -= 1;
+    //                     Debug.Log(jonas.Physique.FatPoint+"; "+jonas.Physique.Weight);
+    //                 }
+    //             }
+    //         }
+    //         }
+    //     };
+    //     narrativeRenderer.Render(sections);
+    //     StartCoroutine(RebuildLayout());
+
+    // }
+
+
     IEnumerator RebuildLayout()
     {
         // yield return new WaitForEndOfFrame();

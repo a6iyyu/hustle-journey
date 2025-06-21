@@ -1,7 +1,6 @@
 using System;
-using Assets.App.Enums;
-using Assets.App.Interfaces;
-namespace Assets.App.Entities
+using Assets.App.Scripts.Interfaces;
+namespace Assets.App.Scripts.Entities
 {
     public class Character: IEntity
     {

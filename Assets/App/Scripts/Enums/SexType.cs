@@ -1,4 +1,4 @@
-namespace Assets.App.Enums
+namespace Assets.App.Scripts.Enums
 {
     public enum SexType
     {

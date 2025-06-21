@@ -1,8 +1,8 @@
 using System;
-using Assets.App.Enums;
-using Assets.App.Interfaces;
+using Assets.App.Scripts.Enums;
+using Assets.App.Scripts.Interfaces;
 
-namespace Assets.App.Entities
+namespace Assets.App.Scripts.Entities
 {
     public class Pet: IEntity
     {

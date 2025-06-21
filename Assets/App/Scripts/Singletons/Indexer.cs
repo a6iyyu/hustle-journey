@@ -3,7 +3,7 @@ namespace Assets.App.Scripts.Singletons
 	using System.Collections.Generic;
 	using UnityEngine;
 	using System;
-    using Assets.App.Entities;
+    using Assets.App.Scripts.Entities;
 
     public class Indexer : MonoBehaviour
 	{

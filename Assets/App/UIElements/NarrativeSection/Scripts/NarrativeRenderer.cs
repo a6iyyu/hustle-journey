@@ -7,6 +7,11 @@ public class NarrativeRenderer : MonoBehaviour
     public Transform narrativePanel; // Assign: NarrativePanel
     public GameObject sectionPrefab; // Assign: NarrativeSection prefab
 
+
+    /// <summary>
+    /// Clears all narrative sections from the narrative panel by destroying all its children.
+    /// </summary>
+/// 
     public void Clear()
     {
         foreach (Transform child in narrativePanel)
@@ -15,12 +20,24 @@ public class NarrativeRenderer : MonoBehaviour
         }
     }
 
+/// <summary>
+/// Appends a new narrative section to the narrative panel by instantiating a new
+/// section prefab and setting its text and actions.
+/// </summary>
+/// <param name="section">The NarrativeSectionData object containing the text and actions to display.</param>
+
     public void Append(NarrativeSectionData section)
     {
         var go = Instantiate(sectionPrefab, narrativePanel);
         var sectionUI = go.GetComponent<NarrativeSectionUI>();
         sectionUI.Set(section.Text, section.Actions);
     }
+
+/// <summary>
+/// Renders the given list of narrative sections by clearing the existing content
+/// and appending each section to the narrative panel.
+/// </summary>
+/// <param name="sections">A list of NarrativeSectionData objects to be rendered.</param>
 
     public void Render(List<NarrativeSectionData> sections)
     {
