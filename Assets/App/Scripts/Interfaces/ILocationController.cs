@@ -1,11 +1,7 @@
-using UnityEngine;
-
-namespace Assets.App.Scripts.Interfaces
+public interface ILocationController
 {
-    public interface ILocationController
-    {
-        int CurrentLocationId { get; }
-        NarrativeRenderer NarrativeRenderer { get; }
-        public void RenderLocation();
-    }
+    /// <summary>
+    /// Renders the location's narrative sections.
+    /// </summary>
+    void RenderLocation();
 }

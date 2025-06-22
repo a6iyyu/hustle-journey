@@ -1,50 +1,55 @@
 using System.Collections.Generic;
 using App.UIElements.NarrativeSection.DTOs;
-using Assets.App.Scripts.Interfaces;
-using Assets.App.Scripts.Singletons;
 using UnityEngine;
 
-public class BedroomController : MonoBehaviour, ILocationController{
-    public int CurrentLocationId { get; private set; }
-
-    public NarrativeRenderer NarrativeRenderer { get; private set; }
-
-
-    private void Start()
+public class BedroomController : LocationController
+{
+    [SerializeField] LivingRoomController livingRoomController;
+    private List<NarrativeSectionData> sectionData;
+    // private void Start()
+    // {
+    //     NarrativeRenderer = FindFirstObjectByType<NarrativeRenderer>();
+    // }
+    void Awake()
     {
-        CurrentLocationId = 0;
-        NarrativeRenderer = FindFirstObjectByType<NarrativeRenderer>();
-    }
-    public void RenderLocation()
-    {
-        Location location;
         try
         {
-            location = Indexer.Instance.Locations[CurrentLocationId];
-            if (location == null)
-            {
-                Debug.LogError($"Location with ID {CurrentLocationId} not found.");
-                return;
-            }
+            sectionData = new List<NarrativeSectionData>{
 
-            List<NarrativeSectionData> sectionData = new List<NarrativeSectionData>()
-            {
-                new() {
-                    Text = location.Trails != null && location.Trails.Length > 0
-                        ? string.Join(" > ", location.Trails)
-                        : "No trails available."
+                new ()
+                {
+                    Text = "Your House > Bedroom",
                 },
-                new() {
-                    Text=location.Name
+                new ()
+                {
+                    Text = "You are in the bedroom.",
+                },
+                new ()
+                {
+                    Text = "Behind the wooden door, you can go to the living room.",
+                    Actions = new List<ActionChoice>
+                    {
+                        new()
+                        {
+                            Label = "Go to Living Room",
+                            OnClick = () => navigationManager.NavigateTo("LivingRoom")
+                        }
+                    }
                 },
             };
-
-            NarrativeRenderer.Render(sectionData);
         }
-        catch (System.Exception)
+        catch (System.Exception ex)
         {
-
-            throw;
+            Debug.LogError(ex.Message);
         }
+    }
+    public override void RenderLocation()
+    {
+        if (narrativeRenderer == null)
+        {
+            Debug.LogError("NarrativeRenderer is not set. Cannot render location.");
+            return;
+        }
+        narrativeRenderer.Render(sectionData);
     }
 }

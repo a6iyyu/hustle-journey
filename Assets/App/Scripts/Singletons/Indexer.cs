@@ -4,7 +4,6 @@ namespace Assets.App.Scripts.Singletons
 	using UnityEngine;
 	using System;
     using Assets.App.Scripts.Entities;
-    using Assets.App.Scripts.Collections;
 
     public class Indexer : MonoBehaviour
 	{
@@ -40,12 +39,10 @@ namespace Assets.App.Scripts.Singletons
 			Characters = new Dictionary<Guid, Character>();
 			Pets = new Dictionary<Guid, Pet>();
 			Physiques = new Dictionary<Guid, Physique>();
-			Locations = GetComponent<LocationCollection>().locations;
 
 		}
 		public Dictionary<Guid, Character> Characters { get; private set; }
 		public Dictionary<Guid, Pet> Pets { get; private set; }
 		public Dictionary<Guid, Physique> Physiques { get; private set; }
-		public Dictionary<int, Location> Locations { get; private set; }
 	}
 }
