@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab2114bdc8544297b417dfefe9f1e410, type: 3}
+  m_Name: CustomStyleSheet
+  m_EditorClassIdentifier: 
+  m_StyleList:
+  - m_Name: Normal
+    m_HashCode: -1183493901
+    m_OpeningDefinition: '<color="white">
+
+      <size=16px>'
+    m_ClosingDefinition: '</size>
+
+      </color>'
+    m_OpeningTagArray: 3c000000630000006f0000006c0000006f000000720000003d000000220000007700000068000000690000007400000065000000220000003e0000000a0000003c00000073000000690000007a000000650000003d000000310000003600000070000000780000003e000000
+    m_ClosingTagArray: 3c0000002f00000073000000690000007a000000650000003e0000000a0000003c0000002f000000630000006f0000006c0000006f000000720000003e000000

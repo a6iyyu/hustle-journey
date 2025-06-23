@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using App.UIElements.NarrativeSection.DTOs;
+using Assets.App.UIElements.NarrativeSection.DTOs;
 using UnityEngine;
 using UnityEngine.UI;
 

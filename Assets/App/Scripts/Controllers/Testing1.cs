@@ -11,6 +11,7 @@ using NUnit.Framework.Internal;
 using Assets.App.Scripts.Player;
 using Assets.App.Scripts.Enums;
 using Assets.App.Scripts.Models;
+using Assets.App.UIElements.NarrativeSection.DTOs;
 
 public class Testing1 : MonoBehaviour
 {
@@ -39,7 +40,7 @@ public class Testing1 : MonoBehaviour
         {
             new NarrativeSectionData
             {
-                Text = "Test Player Needs"
+                Text = new TextDTO("Player Info", TextStyle.Breadcrumb),
             }
         };
     }

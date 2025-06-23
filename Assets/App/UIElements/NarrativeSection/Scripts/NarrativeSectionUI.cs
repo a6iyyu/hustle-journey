@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using App.UIElements.NarrativeSection.DTOs;
+using Assets.App.UIElements.NarrativeSection.DTOs;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,9 +12,16 @@ public class NarrativeSectionUI : MonoBehaviour
     public Transform actionContainer;
     public GameObject actionButtonPrefab;
 
-    public void Set(string text, List<ActionChoice> actions)
+    public void Set(TextDTO text, List<ActionChoice> actions)
     {
-        narrativeText.text = text;
+        if (text.StyleOverride != null)
+        {
+            narrativeText.text = "<style=\"" + text.StyleOverride.ToString() + "\">" + text.ToString() + "</style>";
+        }
+        else
+        {
+            narrativeText.text = text.ToString();
+        }
 
         // Clear old buttons
         foreach (Transform child in actionContainer)
@@ -21,7 +29,7 @@ public class NarrativeSectionUI : MonoBehaviour
             Destroy(child.gameObject);
         }
 
-        if(actions == null) return;
+        if (actions == null) return;
         // Add buttons
         foreach (var action in actions)
         {

@@ -651,7 +651,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 743067930}
-  - component: {fileID: 743067929}
   m_Layer: 0
   m_Name: Testing
   m_TagString: Untagged
@@ -659,19 +658,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &743067929
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 743067928}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d93244778b6ac2f478b68b473f37b9bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canvas: {fileID: 32600789}
 --- !u!4 &743067930
 Transform:
   m_ObjectHideFlags: 0
@@ -1055,7 +1041,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 532665367163840706, guid: 83fe9b4dd4ee1c049958efa5cb256022, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -45.735
+      value: -8.94
       objectReference: {fileID: 0}
     - target: {fileID: 2047694213163913657, guid: 83fe9b4dd4ee1c049958efa5cb256022, type: 3}
       propertyPath: m_AnchorMax.y
@@ -1075,7 +1061,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2047694213163913657, guid: 83fe9b4dd4ee1c049958efa5cb256022, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -99.47
+      value: -25.88
       objectReference: {fileID: 0}
     - target: {fileID: 2406993266459435510, guid: 83fe9b4dd4ee1c049958efa5cb256022, type: 3}
       propertyPath: m_Name
@@ -1147,7 +1133,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6512099308178570448, guid: 83fe9b4dd4ee1c049958efa5cb256022, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -73.735
+      value: -36.94
       objectReference: {fileID: 0}
     - target: {fileID: 6512099308178570448, guid: 83fe9b4dd4ee1c049958efa5cb256022, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

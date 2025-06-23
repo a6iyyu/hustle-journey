@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using App.UIElements.NarrativeSection.DTOs;
+using Assets.App.UIElements.NarrativeSection.DTOs;
 using UnityEngine;
 
 public class BedroomController : LocationController
@@ -18,15 +19,15 @@ public class BedroomController : LocationController
 
                 new ()
                 {
-                    Text = "Your House > Bedroom",
+                    Text = new TextDTO("Bedroom", TextStyle.Breadcrumb),
                 },
                 new ()
                 {
-                    Text = "You are in the bedroom.",
+                    Text = new TextDTO("You are in a cozy bedroom with a large bed, a wardrobe, and a wooden door leading to the living room."),
                 },
                 new ()
                 {
-                    Text = "Behind the wooden door, you can go to the living room.",
+                    Text = new TextDTO("The room is softly lit, and you can hear the faint sound of a clock ticking in the background."),
                     Actions = new List<ActionChoice>
                     {
                         new()
