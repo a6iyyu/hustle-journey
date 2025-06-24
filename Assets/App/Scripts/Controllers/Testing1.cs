@@ -36,13 +36,13 @@ public class Testing1 : MonoBehaviour
         player.Needs.Satiety = 50;
         Debug.Log(player.Needs.Satiety);
 
-        var sections = new List<NarrativeSectionData>()
-        {
-            new NarrativeSectionData
-            {
-                Text = new TextDTO("Player Info", TextStyle.Breadcrumb),
-            }
-        };
+        // var sections = new List<NarrativeSectionData>()
+        // {
+        //     new NarrativeSectionData
+        //     {
+        //         Text = new TextDTO("Player Info", TextStyle.Breadcrumb),
+        //     }
+        // };
     }
     // public void Test2()
     // {

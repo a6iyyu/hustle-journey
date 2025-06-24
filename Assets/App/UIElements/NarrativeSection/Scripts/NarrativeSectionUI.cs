@@ -12,16 +12,11 @@ public class NarrativeSectionUI : MonoBehaviour
     public Transform actionContainer;
     public GameObject actionButtonPrefab;
 
-    public void Set(TextDTO text, List<ActionChoice> actions)
+    public void Set(List<TextDTO> texts, List<ActionChoice> actions)
     {
-        if (text.StyleOverride != null)
-        {
-            narrativeText.text = "<style=\"" + text.StyleOverride.ToString() + "\">" + text.ToString() + "</style>";
-        }
-        else
-        {
-            narrativeText.text = text.ToString();
-        }
+        string combinedText = CombineTexts(texts);
+
+        narrativeText.text = combinedText;
 
         // Clear old buttons
         foreach (Transform child in actionContainer)
@@ -37,5 +32,21 @@ public class NarrativeSectionUI : MonoBehaviour
             go.GetComponent<TextMeshProUGUI>().text = action.Label;
             go.GetComponent<Button>().onClick.AddListener(() => action.OnClick.Invoke());
         }
+    }
+    private string CombineTexts(List<TextDTO> texts)
+    {
+        string combinedText = string.Empty;
+        foreach (var textDTO in texts)
+        {
+            if (textDTO.StyleOverride != null)
+            {
+                combinedText += $"<style=\"{textDTO.StyleOverride}\">{textDTO.Text}</style>";
+            }
+            else
+            {
+                combinedText += textDTO.Text;
+            }
+        }
+        return combinedText;
     }
 }

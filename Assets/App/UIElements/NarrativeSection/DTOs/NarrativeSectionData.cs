@@ -5,7 +5,7 @@ namespace App.UIElements.NarrativeSection.DTOs
 {
     public class NarrativeSectionData
     {
-        public TextDTO Text;
+        public List<TextDTO> Text;
         public List<ActionChoice> Actions;
     }
 }
