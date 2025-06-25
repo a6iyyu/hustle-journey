@@ -4,7 +4,7 @@ using Assets.App.Scripts.Interfaces;
 
 namespace Assets.App.Scripts.Entities
 {
-    public class Pet : IEntity
+    public class Pet: IEntity
     {
         public Guid Id { get; set; }
         public string Name { get; set; }
@@ -12,7 +12,6 @@ namespace Assets.App.Scripts.Entities
         public string Breed { get; set; }
         public SexType Sex { get; set; }
         public Guid OwnerId { get; set; }
-
         public Pet(string name, int age, string breed, SexType sex, Guid ownerId)
         {
             Id = Guid.NewGuid();
