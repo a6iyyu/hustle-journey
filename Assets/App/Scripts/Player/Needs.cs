@@ -1,76 +1,79 @@
+using Assets.App.Scripts.Player;
+
 public class Needs
 {
-    private float _satiety;
-    private float _energy;
-    private float _recreation;
-    private float _hygiene;
-    private float _bladder;
-    private float _social;
-    private float _health;
-    private float _pain;
-    private float _drunkenness;
-    private float _discontent;
-
     // main needs
-    public float Satiety
+    public Need Satiety { get; set; }
+    public Need Energy { get; set; }
+    public Need Recreation
     {
-        get => _satiety;
-        set => _satiety = Clamp(value);
+        get; set;
     }
-    public float Energy
+    public Need Hygiene
     {
-        get => _energy;
-        set => _energy = Clamp(value);
+        get; set;
     }
-    public float Recreation
+    public Need Bladder
     {
-        get => _recreation;
-        set => _recreation = Clamp(value);
-    }
-    public float Hygiene
-    {
-        get => _hygiene;
-        set => _hygiene = Clamp(value);
-    }
-    public float Bladder
-    {
-        get => _bladder;
-        set => _bladder = Clamp(value);
+        get; set;
     }
 
     // secondary needs
-    public float Social
+    public Need Social
     {
-        get => _social;
-        set => _social = Clamp(value);
+        get; set;
     }
-    public float Health
+    public Need Health
     {
-        get => _health;
-        set => _health = Clamp(value);
+        get; set;
     }
 
     // negative effects
-    public float Pain
+    public Need Pain
     {
-        get => _pain;
-        set => _pain = Clamp(value);
+        get; set;
     }
-    public float Drunkenness
+    public Need Drunkenness
     {
-        get => _drunkenness;
-        set => _drunkenness = Clamp(value);
+        get; set;
     }
-    public float Discontent
+    public Need Discontent
     {
-        get => _discontent;
-        set => _discontent = Clamp(value);
+        get; set;
     }
+    public Needs()
+    {
+        // Initialize main needs
+        Satiety = new Need(20, 0, 20);
+        Energy = new Need(20, 0, 20);
+        Recreation = new Need(20, 0, 20);
+        Hygiene = new Need(20, 0, 20);
+        Bladder = new Need(20, 0, 20);
 
-    private float Clamp(float value)
+        // Initialize secondary needs
+        Social = new Need(20, 0, 20);
+        Health = new Need(20, 0, 20);
+
+        // Initialize negative effects
+        Pain = new Need(0, 0, 20);
+        Drunkenness = new Need(0, 0, 20);
+        Discontent = new Need(0, 0, 20);
+    }
+    public Need GetNeedByName(string name)
     {
-        if (value < 0) return 0;
-        if (value > 20) return 20;
-        return value;
+        return name switch
+        {
+            "Satiety" => Satiety,
+            "Energy" => Energy,
+            "Recreation" => Recreation,
+            "Hygiene" => Hygiene,
+            "Bladder" => Bladder,
+            "Social" => Social,
+            "Health" => Health,
+            "Pain" => Pain,
+            "Drunkenness" => Drunkenness,
+            "Discontent" => Discontent,
+            _ => null
+        };
     }
 }

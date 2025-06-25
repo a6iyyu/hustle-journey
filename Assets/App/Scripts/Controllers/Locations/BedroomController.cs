@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using App.UIElements.NarrativeSection.DTOs;
+using Assets.App.Scripts.Singletons;
 using Assets.App.UIElements.NarrativeSection.DTOs;
 using UnityEngine;
 using UnityEngine.UI;
@@ -39,6 +40,18 @@ public class BedroomController : LocationController
                         }
                     }
                 },
+                new ()
+                {
+                    Text = new List<TextDTO>{ new TextDTO("There is a knife on the bedside table.") },
+                    Actions = new List<ActionChoice>
+                    {
+                        new()
+                        {
+                            Label = "Hurt yourself.",
+                            OnClick = () => Indexer.Instance.Player.Needs.Pain.Value += 10
+                        }
+                    }
+                }
             };
         }
         catch (System.Exception ex)

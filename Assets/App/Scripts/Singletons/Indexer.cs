@@ -4,6 +4,7 @@ namespace Assets.App.Scripts.Singletons
 	using UnityEngine;
 	using System;
     using Assets.App.Scripts.Entities;
+    using Assets.App.Scripts.Player;
 
     public class Indexer : MonoBehaviour
 	{
@@ -26,7 +27,7 @@ namespace Assets.App.Scripts.Singletons
 				return _instance;
 			}
 		}
-		private void Start()
+		private void Awake()
 		{
 			if (_instance != null && _instance != this)
 			{
@@ -39,10 +40,12 @@ namespace Assets.App.Scripts.Singletons
 			Characters = new Dictionary<Guid, Character>();
 			Pets = new Dictionary<Guid, Pet>();
 			Physiques = new Dictionary<Guid, Physique>();
+			Player = new Player();
 
 		}
 		public Dictionary<Guid, Character> Characters { get; private set; }
 		public Dictionary<Guid, Pet> Pets { get; private set; }
 		public Dictionary<Guid, Physique> Physiques { get; private set; }
+		public Player Player { get; private set; }
 	}
 }
