@@ -52,7 +52,5 @@ public class NeedSectionUI : MonoBehaviour
             }
         }
         return sb.ToString();
-
     }
-
 }

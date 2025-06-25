@@ -1,5 +1,6 @@
-using System;
 using Assets.App.Scripts.Interfaces;
+using System;
+
 namespace Assets.App.Scripts.Entities
 {
     public class Character: IEntity
@@ -8,6 +9,7 @@ namespace Assets.App.Scripts.Entities
         public string Name { get; set; }
         public int Age { get; set; }
         public Guid PhysiqueId { get; set; }
+
         public Character(string name, int age, Guid physiqueId)
         {
             Id = Guid.NewGuid();

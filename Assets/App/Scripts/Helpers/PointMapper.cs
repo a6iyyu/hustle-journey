@@ -1,4 +1,5 @@
 using Unity.VisualScripting;
+
 namespace Assets.App.Scripts.Helpers
 {
     public class PointMapper
@@ -13,6 +14,5 @@ namespace Assets.App.Scripts.Helpers
             var point = (realValue - min) / (max - min) * 100f;
             return point;
         }
-        
     }
 }
