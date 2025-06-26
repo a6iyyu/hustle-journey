@@ -15,7 +15,6 @@ public class NeedSectionUI : MonoBehaviour
     void Start()
     {
         needObject = Indexer.Instance.Player.Needs.GetNeedByName(needName);
-        nameDisplay.text = TitleCase(needName);
         if (needObject == null)
         {
             Debug.LogError($"Need '{needName}' not found in player's needs.");
@@ -27,6 +26,10 @@ public class NeedSectionUI : MonoBehaviour
     void Update()
     {
         barFill.fillAmount = needObject.Value / needObject.MaxValue;
+    }
+    void OnValidate()
+    {
+        nameDisplay.text = TitleCase(needName);
     }
 
     private string TitleCase(string str)
